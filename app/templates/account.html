@@ -1,0 +1,300 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Account | JSMC Food Court</title> 
+{% endblock %}
+
+<style>
+    .cancel {
+        text-decoration: none
+    }
+
+    .bg-pay {
+        background-color: #eee;
+        border-radius: 2px
+    }
+
+    .com-color {
+        color: #8f37aa !important
+    }
+
+    .radio {
+        cursor: pointer
+    }
+
+    label.radio input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        pointer-events: none
+    }
+
+    label.radio div {
+        padding: 7px 14px;
+        border: 2px solid #8f37aa;
+        display: inline-block;
+        color: #8f37aa;
+        border-radius: 3px;
+        text-transform: uppercase;
+        width: 100%;
+        margin-bottom: 10px
+    }
+
+    label.radio input:checked+div {
+        border-color: #8f37aa;
+        background-color: #8f37aa;
+        color: #fff
+    }
+
+    .fw-500 {
+        font-weight: 400
+    }
+
+    .lh-16 {
+        line-height: 16px
+    }
+</style>
+
+{% block body %}
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    <br>
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="container text-center">
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+   
+    <div style="padding-top: 75px;" class="container">
+        
+        <div class="m-5">
+            <div class="media">
+                <img class="rounded-circle" src="{{ image_file }}" style="width: 125px; height: 125px;">
+                <div class="media-body">
+                    <div class="ml-4">
+                        <h2 class="account-heading">{{ current_user.email }}</h2>
+                        <p class="text-secondary">{{ current_user.phonenumber }}</p>
+                        <p class="text-secondary">
+                            {% if account_activated == False %}
+                                <p class="text-danger">Your account has not been activated yet. <a href="{{ url_for('send_activate_account_email') }}" class="text-success">Activate account</a> or <a onclick="document.getElementById('id01').style.display='block'" class="text-primary">learn more.</a></p>
+                                <p class="text-danger">If you are using the wrong email, click the "Change Email Address" button below.</p>
+                            {% endif %}
+                        </p>
+                        <p class="text-secondary">
+                            <a style="color: white; width: 225px;" class="btn btn-info" href="{{ url_for('snack_page') }}">Home Page</a>
+                        </p>
+                        <p class="text-secondary">
+                            <a style="color: white; width: 225px;" class="btn btn-info" href="{{ url_for('change_email') }}">Change Email Address</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <div class="content-section">
+            <form method="POST" action="" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                <fieldset class="form-group">
+                    <legend class="mb-4">Account Info</legend>
+                    <div class="form-group">
+                        {{ form.phonenumber.label(class="form-control-label") }}
+                        {% if form.phonenumber.errors %}
+                            {{ form.phonenumber(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.phonenumber.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.phonenumber(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.picture.label() }}
+                        {{ form.picture(class="form-control-file") }}
+                        {% if form.picture.errors %}
+                            {% for error in form.picture.errors %}
+                                <br>   
+                                <span class="text-danger">{{ error }}</span></br>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+
+                    <br>
+                    <hr>
+                    <br>
+
+                    <div class="form-group">
+                        {{ form.creditcardnum.label(class="form-control-label") }}
+                        {% if form.creditcardnum.errors %}
+                            {{ form.creditcardnum(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.creditcardnum.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.creditcardnum(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.securitycode.label(class="form-control-label") }}
+                        {% if form.securitycode.errors %}
+                            {{ form.securitycode(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.securitycode.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.securitycode(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.expirationdate.label(class="form-control-label") }}
+                        {% if form.expirationdate.errors %}
+                            {{ form.expirationdate(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.expirationdate.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.expirationdate(class="form-control form-control-lg") }}
+                        {% endif %}
+                        <div class="text-muted">MM/YYYY</div>
+                    </div>
+                    <div class="form-group">
+                        {{ form.street.label(class="form-control-label") }}
+                        {% if form.street.errors %}
+                            {{ form.street(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.street.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.street(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.city.label(class="form-control-label") }}
+                        {% if form.city.errors %}
+                            {{ form.city(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.city.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.city(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.state.label(class="form-control-label") }}
+                        {% if form.state.errors %}
+                            {{ form.state(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.state.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.state(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.postalzip.label(class="form-control-label") }}
+                        {% if form.postalzip.errors %}
+                            {{ form.postalzip(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.postalzip.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.postalzip(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    {{ form.submit(class="container btn btn-info") }}
+                </div>
+            </form>
+        </div>
+        
+        <br>
+        <hr>
+        
+        <div>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-row align-items-center">
+                    <legend class="mt-1">Order History</legend>
+                </div> {% if history_of_carts %}<a href="{{ url_for('clear_order_history') }}" type="button" class="text-center btn btn-small btn-warning">Clear Order History</a>{% endif %}
+            </div>
+            <hr>
+            <br>
+            {% if history_of_carts %}
+                {% for cart in history_of_carts %}
+                    <div class="d-flex justify-content-between mt-2"> <span class="fw-500 font-weight-bold"><h5>Cart ID:</h5></span> <span class="font-weight-bold"><h5>{{ cart.id }}</h5></span> </div>
+                    <br>
+                    <div class="text-muted d-flex justify-content-between mt-2"> <span class="fw-500">Active:</span> <span>{{ cart.active }}</span> </div>
+                    <div class="text-muted d-flex justify-content-between mt-2"> <span class="fw-500">Purchase Confirmed:</span> <span>{{ cart.purchase_confirmed }}</span> </div>
+                    <div class="text-muted d-flex justify-content-between mt-2"> <span class="fw-500">Purchase Confirmed Date:</span> <span>{{ cart.purchase_confirmed_date }}</span> </div>
+                    <br>
+                    {% for item in lineitems %}
+                        {% if lineitems[item] == cart.id %}
+                            <div class="d-flex justify-content-between mt-2"> <span class="fw-500 font-weight-bold">{{ item.name }}</span> <span class="font-weight-bold">${{ item.unit_price * item.quantity }}0</span> </div>
+                            <div class="text-muted d-flex justify-content-between mt-2"> <span class="fw-500">Quantity:</span> <span>{{ item.quantity }}</span> </div>
+                            <div class="text-muted d-flex justify-content-between mt-2"> <span class="fw-500">Unit Price:</span> <span>${{ item.unit_price }}0</span> </div>
+                            {% endif %}        
+                    {% endfor %}
+                    <br>
+                    <div class="d-flex justify-content-between mt-2"> <span class="fw-500">Total Price:</span> <span class="text-success">${{ cart.total_price }}0</span> </div>
+                    <hr>
+                {% endfor %}
+                <br>
+                <br>
+                <br>
+                <br>
+            {% else %}
+                <h5 class="text-left">You do not have any previous orders.</h5>
+            {% endif %}
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+    <div class="w3-container">
+
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content">
+        <div class="w3-container">
+            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <br>
+            <p>Your account has not been activated yet. You will not be able to request any transactions or make any purchases. Please activate your account first.</p>
+            <p>To activate your account, exit out of this display and click the "activate account" link.</p>
+            <br>
+        </div>
+        </div>
+    </div>
+    </div>
+            
+</body>
+</html>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+{% endblock %}

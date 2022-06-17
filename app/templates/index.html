@@ -1,0 +1,292 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>Home | JSMC Food Court</title> 
+{% endblock %}
+
+
+{% block CartNav %}
+    <button style="color: white;" class="ml-3 btn btn-info" type="submit" data-toggle="modal" data-target="#ViewCart">View Cart ( {{ item_counter }} )</button>
+{% endblock %}
+
+{% block body %}
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    <br>
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="container text-center">
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <div id="content"><h2 style="padding-top: 75px;">Specials</h2>
+        <hr>
+
+            
+            <div class="col-lg-12">
+                <div class="row my-5 card-wrapper">
+                    {% for product in specials %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <img class="card-img-top embed-responsive-item" src="{{ product.image_file }}">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">{{ product.name }}</h4>
+                                    <h5>${{ product.unit_price }}0</h5>
+                                    <p style="border-top: 2px solid black; padding-top: 7px;" class="card-text">{{ product.size }}</p>
+                                </div>
+                                <div class="card-footer">
+                                    {% if current_user.is_authenticated %}
+                                        <form method="POST" action="">
+                                            <div class="text-center">
+                                                {{ addtocart.hidden_tag() }}
+                                                <div>Quantity: {{ addtocart.quantity }}</div>
+                                                
+                                                <div style="padding-top: 10px;">
+                                                    <input id="addtocart" name="addtocart" type="hidden" value="{{ product.name }}">
+                                                    {{ addtocart.addbtn(class="btn btn-primary") }}
+                                                </div>
+                                            </div>
+                                        </form>
+                                    {% else %}
+                                        <p class="text-muted">Log in or register to add items to your cart.</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <h2>Sweets</h2>
+        <hr>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row my-5 card-wrapper">
+                    {% for product in sweets %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <img class="card-img-top embed-responsive-item" src="{{ product.image_file }}">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">{{ product.name }}</h4>
+                                    <h5>${{ product.unit_price }}0</h5>
+                                    <p style="border-top: 2px solid black; padding-top: 7px;" class="card-text">{{ product.size }}</p>
+                                </div>
+                                <div class="card-footer">
+                                    {% if current_user.is_authenticated %}
+                                        <form method="POST" action="">
+                                            <div class="text-center">
+                                                {{ addtocart.hidden_tag() }}
+                                                <div>Quantity: {{ addtocart.quantity }}</div>
+                                                
+                                                <div style="padding-top: 10px;">
+                                                    <input id="addtocart" name="addtocart" type="hidden" value="{{ product.name }}">
+                                                    {{ addtocart.addbtn(class="btn btn-primary") }}
+                                                </div>
+                                            </div>
+                                        </form>
+                                    {% else %}
+                                        <p class="text-muted">Log in or register to add items to your cart.</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <h2>Khakharas</h2>
+        <hr>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row my-5 card-wrapper">
+                    {% for product in khakharas %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <img class="card-img-top embed-responsive-item" src="{{ product.image_file }}">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">{{ product.name }}</h4>
+                                    <h5>${{ product.unit_price }}0</h5>
+                                    <p style="border-top: 2px solid black; padding-top: 7px;" class="card-text">{{ product.size }}</p>
+                                </div>
+                                <div class="card-footer">
+                                    {% if current_user.is_authenticated %}
+                                        <form method="POST" action="">
+                                            <div class="text-center">
+                                                {{ addtocart.hidden_tag() }}
+                                                <div>Quantity: {{ addtocart.quantity }}</div>
+                                                
+                                                <div style="padding-top: 10px;">
+                                                    <input id="addtocart" name="addtocart" type="hidden" value="{{ product.name }}">
+                                                    {{ addtocart.addbtn(class="btn btn-primary") }}
+                                                </div>
+                                            </div>
+                                        </form>
+                                    {% else %}
+                                        <p class="text-muted">Log in or register to add items to your cart.</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <h2>Dry Snacks</h2>
+        <hr>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row my-5 card-wrapper">
+                    {% for product in drysnacks %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <img class="card-img-top embed-responsive-item" src="{{ product.image_file }}">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">{{ product.name }}</h4>
+                                    <h5>${{ product.unit_price }}0</h5>
+                                    <p style="border-top: 2px solid black; padding-top: 7px;" class="card-text">{{ product.size }}</p>
+                                </div>
+                                <div class="card-footer">
+                                    {% if current_user.is_authenticated %}
+                                        <form method="POST" action="">
+                                            <div class="text-center">
+                                                {{ addtocart.hidden_tag() }}
+                                                <div>Quantity: {{ addtocart.quantity }}</div>
+                                                
+                                                <div style="padding-top: 10px;">
+                                                    <input id="addtocart" name="addtocart" type="hidden" value="{{ product.name }}">
+                                                    {{ addtocart.addbtn(class="btn btn-primary") }}
+                                                </div>
+                                            </div>
+                                        </form>
+                                    {% else %}
+                                        <p class="text-muted">Log in or register to add items to your cart.</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid text-center modal fade" id="ViewCart" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: 1200px;">
+                <div class="modal-header">
+                    <h5 class="modal-title">Your Cart ({{ item_counter }})</h5>
+                    {% if products %}
+                        <div style="padding-left: 900px;">
+                            <form action="" method="POST"> 
+                                {{ empty_cart_form.hidden_tag() }} 
+                                <input id="emptycartbutton" name="emptycartbutton" type="hidden" value="EmptyCartBtn" class="btn btn-danger"> 
+                                {{ empty_cart_form.empty_cart(class="btn btn-warning") }}
+                            </form> 
+                        </div>
+                    {% endif %}
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">    
+                        <span aria-hidden="false">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body m-3">
+                    {% if products %}
+                        <table class="table table-hover table-bordered text-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in products %}
+                                    <tr>
+                                        <td>
+                                            <img src="{{ item.image_file }}" alt="Product Image" style="width: 150px; height: 100px;">
+                                        </td>
+                                        <td>{{ item.name }}</td>
+                                        <td>{{ item.size }}</td>
+                                        <td>${{ item.unit_price }}0</td>
+                                        <td>
+                                            Current Quantity: <br><b>{{ products[item] }}</b>
+                                            <br>
+                                            <br>
+                                            Change Quantity:
+                                            <form method="POST" action="">
+                                                {{ edit_quantity_form.hidden_tag() }}
+                                                <select id="new_quantity_input" name="new_quantity_input" placeholder="{{ products[item] }}" size="1">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>
+                                                <br>
+                                                <div style="padding-top: 10px;">
+                                                    <input id="savenewquantitybutton" name="savenewquantitybutton" type="hidden" value="{{ item.name }}">
+                                                    {{ edit_quantity_form.save_new_quantity(class="btn btn-primary") }}
+                                                </div>
+                                            </form>
+
+                                        </td>
+                                        <td>
+                                            <form action="" method="POST">
+                                                {{ removeallform.hidden_tag() }}
+                                                <input id="deleteallofproduct" name="deleteallofproduct" type="hidden" value="{{ item.name }}" class="btn btn-danger">
+                                                {{ removeallform.remove(class="btn btn-warning") }}
+                                            </form>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+
+                        <div class="text-right">
+                            <br><br>
+                            <h5>Total Price:</h5> </span> <span class="text-success font-weight-bold"><h5>${{ total_price }}0</h5>
+                        </div>
+        
+                        
+                    {% else %}
+                        <br><h3 class="text-center">Your cart is empty.</h3><br><br>
+                        <h4 class="text-center">Visit the <a href="{{ url_for('snack_page') }}">home page</a> to add items to your cart.</h4>
+                    {% endif %}
+                </div>
+                {% if products %}
+                    <div class="modal-footer">
+                        <div class="text-center">
+                            <br>
+                            <a href="{{ url_for('checkout') }}" class="text-center btn btn-success">Proceed To Checkout</a>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+{% endblock %}

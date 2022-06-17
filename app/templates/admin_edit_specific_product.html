@@ -1,0 +1,95 @@
+
+{% extends "base.html" %}
+
+{% block head %}
+<title>Add Product | JSMC Food Court</title> 
+{% endblock %}
+
+{% block body %}
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    <br>
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="container text-center">
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <div style="padding-top: 75px;" class="container">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="d-flex flex-row align-items-center">
+                <h2 class="mt-1">Edit: <b>{{ product_obj.name }}</b></h2>
+            </div><a href="{{ url_for('redirect_to_admin_panel') }}" type="button" style="width: 200px;" class="text-center btn btn-small btn-warning">Return to Admin Panel</a>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="d-flex flex-row align-items-center">
+            </div><a href="{{ url_for('admin_add_products') }}" type="button" style="width: 200px;" class="text-center btn btn-small btn-primary">Add Product</a>
+        </div>  
+        <hr>
+        <div class="content-section">
+            <form method="POST" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                <br>
+                <fieldset class="form-group">
+                    <div class="form-group">
+                        {{ form.name.label(class="form-control-label") }}
+                        {% if form.name.errors %}
+                            {{ form.name(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.name.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.name(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.size.label(class="form-control-label") }}
+                        {% if form.size.errors %}
+                            {{ form.size(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.size.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.size(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.unit_price.label(class="form-control-label") }}
+                        {% if form.unit_price.errors %}
+                            {{ form.unit_price(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.unit_price.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.unit_price(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    Current Category of Product: <b>{{ product_category }}</b><br><br>
+                    <select id="category_input" name="category_input" size="1">
+                        <option value="specials">Specials</option>
+                        <option value="sweets">Sweets</option>
+                        <option value="khakharas">Khakharas</option>
+                        <option value="drysnacks">Dry Snacks</option>
+                    </select>
+                </fieldset>
+                <div class="form-group">
+                    <br>
+                    <input id="edit_product_btn" name="edit_product_btn" type="hidden">
+                    {{ form.save(class="btn btn-success") }}
+                </div>
+            </form>
+        </div>
+
+    </div>
+{% endblock %}

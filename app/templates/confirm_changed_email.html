@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Confirm Email Change | JSMC Food Court</title> 
+{% endblock %}
+
+
+{% block body %}
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    <br>
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="container text-center">
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+   
+    <div style="padding-top: 75px;" class="container">
+        
+        <div class="m-5">
+            <div class="media">
+                <div class="media-body">
+                    <div class="ml-4">
+                        <h2 class="account-heading">Change Email To: {{ form_new_email_data }}</h2>
+                        <p class="text-secondary">{{ current_user.phonenumber }}</p>
+                        <p class="text-secondary">
+                            <a style="color: white; width: 225px;" class="btn btn-info" href="{{ url_for('snack_page') }}">Home Page</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <div class="content-section">
+            <form method="POST" action="" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                <fieldset class="form-group">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex flex-row align-items-center">
+                            <legend class="mt-2">Change Email</legend>
+                        </div>
+                        
+                        <a href="{{ url_for('resend_email_confirmation_email') }}" type="button" class="text-center btn btn-small btn-primary">Resend Email</a>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        {{ form.sixdigitcode.label(class="form-control-label") }}
+                        {% if form.sixdigitcode.errors %}
+                            {{ form.sixdigitcode(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.sixdigitcode.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.sixdigitcode(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    {{ form.submit(class="container btn btn-success") }}
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+{% endblock %}

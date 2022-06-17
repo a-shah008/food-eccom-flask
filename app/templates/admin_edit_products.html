@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Edit Products | JSMC Food Court</title> 
+{% endblock %}
+
+{% block body %}
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    <br>
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="container text-center">
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <div style="padding-top: 75px;" class="container">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="d-flex flex-row align-items-center">
+                <h2 class="mt-1">Edit Products</h2>
+            </div><a href="{{ url_for('redirect_to_admin_panel') }}" type="button" style="width: 200px;" class="text-center btn btn-small btn-warning">Return to Admin Panel</a>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="d-flex flex-row align-items-center">
+            </div><a href="{{ url_for('admin_add_products') }}" type="button" style="width: 200px;" class="text-center btn btn-small btn-primary">Add Product</a>
+        </div>
+        <h5 class="text-right">Product Counter: {{ product_counter }}</h5>
+        
+        <hr>
+        <table class="table text-center table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Size</th>
+                <th scope="col">Unit Price</th>
+                <th scope="col" colspan="3">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for product in all_products %}
+                    <tr>
+                        <th scope="row">#{{ product.id }}</th>
+                        <td><img src="{{ product.image_file }}" style="width: 70px; height: 70px;" alt="Image of {{ product.name }}"></td>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.size }}</td>
+                        <td>${{ product.unit_price }}0</td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            <form action="" method="POST">
+                                {{ delete_product_form.hidden_tag() }}
+                                <input id="delete_product_btn" name="delete_product_btn" type="hidden" value="{{ product.name }}" class="btn btn-danger">
+                                {{ delete_product_form.delete(class="btn btn-danger") }}
+                            </form>                    
+                        </td>
+                        <td>
+                            <form action="" method="POST">
+                                {{ edit_initialize_product_form.hidden_tag() }}
+                                <input id="edit_initialize_product_btn" name="edit_initialize_product_btn" type="hidden" value="{{ product.name }}" class="btn btn-danger">
+                                {{ edit_initialize_product_form.edit(class="btn btn-primary") }}
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

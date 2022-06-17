@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Admin | JSMC Food Court</title> 
+{% endblock %}
+
+{% block body %}
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    <br>
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="container text-center">
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    
+    <div class="container-fluid">
+        <div style="padding-top: 75px;">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="d-flex flex-row align-items-center">
+                    <h2 class="mt-1">Admin Panel</h2>
+                </div><a href="{{ url_for('snack_page') }}" type="button" style="width: 200px;" class="text-center btn btn-small btn-warning">Return Home</a>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="d-flex flex-row align-items-center">
+                </div><a href="{{ url_for('admin_edit_products') }}" type="button" style="width: 200px;" class="text-center btn btn-small btn-primary">Edit Products</a>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="d-flex flex-row align-items-center">
+                </div><a href="{{ url_for('admin_add_products') }}" type="button" style="width: 200px;" class="text-center btn btn-small btn-primary">Add Products</a>
+            </div>
+            <br>
+            <hr>
+            <br>
+        </div>
+    </div>
+        <div class="row">
+            <div style="border: 3px solid lightgrey; padding: 35px;" class="col-sm mr-5">
+                <h3>Users</h3>
+                <hr>
+                {% if users %}
+                    {% for user in users %}
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex flex-row align-items-center">
+                                <b>User ID: {{ user.id }}</b>
+                            </div>
+                            <b>{{ user.email }}</b>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex flex-row align-items-center">
+                                Phone Number:
+                            </div><b>{{ user.phonenumber }}</b>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex flex-row align-items-center">
+                                Confirmed Status: 
+                            </div><b>{{ user.confirmed }}</b>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex flex-row align-items-center">
+                                Admin Status: 
+                            </div><b>
+                                {% if user.is_admin %}
+                                    <p class="text-success">Is Admin</p>
+                                {% else %}
+                                    Is Not Admin
+                                {% endif %}
+                            </b>
+                        </div>
+                        <hr>
+                    {% endfor %}
+                {% else %}
+                <h5><b>None</b></h5>
+                {% endif %}
+            </div>
+
+
+            <div style="border: 3px solid lightgrey; padding: 35px;" class="col-sm mr-5">
+                <h3>Admins</h3>
+                <hr>
+                {% if admins %}
+                    {% for admin in admins %}
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex flex-row align-items-center">
+                                <b>User ID: {{ admin.id }}</b>
+                            </div>
+                            <b>{{ admin.email }}</b>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex flex-row align-items-center">
+                                Phone Number:
+                            </div><b>{{ admin.phonenumber }}</b>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex flex-row align-items-center">
+                                Confirmed Status: 
+                            </div><b>{{ admin.confirmed }}</b>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex flex-row align-items-center">
+                                Admin Status: 
+                            </div><b class="text-success">Is Admin</b>
+                        </div>
+                        <hr>
+                    {% endfor %}
+                {% else %}
+                <h5><b>None</b></h5>
+                {% endif %}
+            </div>
+
+
+            <div style="border: 3px solid lightgrey; padding: 35px;" class="col-sm">
+                <h3>Confirmed Orders</h3>
+                <hr>
+                {% if orders_dict %}
+                    {% for order in orders_dict %}
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex flex-row align-items-center">
+                                <b>Order ID: {{ order }}</b>
+                            </div>
+                            <b>{{ orders_dict[order] }}</b>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex flex-row align-items-center">
+                                Total Price:
+                            </div><b>${{ order.total_price }}0</b>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex flex-row align-items-center">
+                                Active Status: 
+                            </div><b>{{ order.active }}</b>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex flex-row align-items-center">
+                                Purchase Confirmed Status: 
+                            </div><b>{{ order.purchase_confirmed }}</b>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex flex-row align-items-center">
+                                Purchase Confirmed Date: 
+                            </div><b>{{ order.purchase_confirmed_date }}</b>
+                        </div>
+                        <hr>
+                    {% endfor %}
+                {% else %}
+                <h5><b>None</b></h5>
+                {% endif %}
+            </div>
+        </div>
+{% endblock %}

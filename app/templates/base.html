@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel="shortcut icon" type="image/jpg" href="{{ url_for('static', filename='images/favicon-16x16.png') }}"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/bootstrap.js') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/home.js') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/script.js') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- To make my own styles in styles.css actually appear, change that line to be at the end of all stylesheets. -->
+
+    {% block head %} {% endblock %}
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-fixed navbar-dark bg-dark">
+        <img src="{{ url_for('static', filename='images/mainheaderimage.jpg') }}" class="mr-3" style="width: 60px; height: 60px;">
+        <a class="navbar-brand" href="{{ url_for('snack_page') }}">Jain Society of Metropolitan Chicago</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('snack_page') }}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="http://www.jsmconline.org/about_us.php">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('authenticate_admin') }}">Admin</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            {% if current_user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('account') }}">Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">{% block CartNav %}{% endblock %}</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+                </li>
+            {% endif %}
+        </ul>
+        
+        </div>
+    </nav>
+</header>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        <br>
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="container text-center">
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <div class="container">
+
+        {% block body %}
+        {% endblock body %}
+    </div>
+</body>
+</html>

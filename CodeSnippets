@@ -1,0 +1,3499 @@
+<header id="mainheader">
+        <div class="container">
+            <div class="fixed-top">
+                <nav id="mainheader">
+                    <ul>
+                        <li><img src="static/images/leftheaderimage2.png" alt="JSMC Logo" width=60 height=60/></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a target="_blank" href="http://jsmconline.org/about_us.php">About Us</a></li>
+                        <!-- <li><a target="_blank" href="http://jsmconline.org/">More Information</a></li> -->
+                    </ul>
+                </nav>
+            </div>
+        </div>  
+    </header>
+
+    <main role="main">
+        <div class="container">
+            <div class="">
+                <br>
+                <h2 class="display-3">Ready to Order?</h2>
+                <br>
+                <h4 class="display-5">Due to COVID-19, returns and exhanges are not allowed.</h3>
+                <h4 class="display-5">The available order pickup times are on Saturdays and Sundays from 10 A.M. to 12 P.M. <i>only</i> </h4>     
+                <br>
+                <br>
+            </div>
+        </div>
+
+        <div class="container">
+            <form style="background-color: #d3d3d3" action="/order" method="POST">
+                <div class="container">
+                    <div class="p-2 pt-md-4 pb-md-3 mx-auto text-center">
+                        <h3 class="display-4">Your Order Information</h3>
+                    </div>
+
+                    <div class=row>
+                        <div class="col-md-8 offset-2">
+                            <br>
+                            <br>
+                            <h4>Full Name</h4>
+                            <br>
+                            <!-- <form style="background-color: #d3d3d3" action="/order" class="" method="POST"> -->
+                            <div class="row">
+
+                                <div class="col-md-6 mb-4 form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Your First Name">
+                                </div>
+                                <div class="col-md-6 mb-4 form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Your Last Name"
+                                    value=""   >
+                                </div>
+                            </div>
+                            <hr>
+                            <br>
+                            <h4>Email</h4>
+                            <br>
+
+                            <div class="mb-3 form-group">
+                                <label for="email">Email</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">@</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="Your Email">
+                                </div>
+
+                            </div>
+
+                            <br>
+                            <hr>
+                            <h4>Phone Number</h4>
+                            <br>
+
+                            <div class="mb-4">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3 form-group">
+                                        <label for="phonenumber">Phone Number</label>
+                                        <input type="text" class="form-control" id="phonenumber" name="phonenumber" placeholder="000-000-0000">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <br>
+                            <hr>
+                            <h4>Address</h4>
+                            <br>
+                            
+                            <div class="mb-3 form-group">
+                                <label for="streetaddress">Street</label>
+                                <input type="text" class="form-control" id="streetaddress" name="streetaddress" placeholder="Your Street Address">
+                            </div>
+
+                            <div class="mb-3 form-group">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3 form-group">
+                                        <label for="cityaddress">City</label>
+                                        <input type="text" class="form-control" id="cityaddress" name="cityaddress" placeholder="Your City">
+                                    </div>
+                                    <div class="col-md-6 mb-3 form-group">
+                                        <label for="stateaddress">State / Province</label>
+                                        <input type="text" class="form-control" id="stateaddress" name="stateaddress" placeholder="Your State / Province">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 form-group">
+                                <label for="zipaddress">Postal / Zip Code</label>
+                                <input type="text" class="form-control" id="zipaddress" name="zipaddress" placeholder="Your Postal / Zip Code">
+                            </div>
+
+                            <!-- The following code is for the remarks, but I later decided not to use them  -->
+                            <!-- <div class="mb-3">
+                                <div class="form-group">
+                                    <label for="remarks">Remarks</label>
+                                    <textarea class="form-control" id="remarks" rows="3">Type in any remarks here (optional)...</textarea>
+                                </div>
+                            </div> -->
+
+                            <br>
+                            <hr>
+                            <h4>Your Cart:</h4>
+                            <br>
+                            <div class="boxed">
+                                <div class="container">
+                                    This is where the ordered items from the homepage will go using some kind of backend system to place the ordered items
+                                    from the click appear in this box (temporary: just to show)
+                                </div>
+                            </div>
+
+
+                            <br>
+                            <hr>
+                            <h4>Credit Card Details</h4>
+                            <br>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-4 form-group">
+                                    <label for="ccnumber">Credit Card Number</label>
+                                    <input type="text" class="form-control" id="ccnumber" name="ccnumber" placeholder="Your Credit Card Number">
+                                </div>
+                                <div class="col-md-6 mb-4 form-group">
+                                    <label for="securitycode">Security Code</label>
+                                    <input type="text" class="form-control" id="securitycode" name="securitycode" placeholder="CVC"
+                                    value=""   >
+                                </div>
+                            </div>
+
+                            <div class="mb-3 form-group">
+                                <label for="expirationdate">Credit Card Expiration Date</label>
+                                <input type="text" class="form-control" id="expirationdate" name="expirationdate" placeholder="MM/YY">
+                            </div>
+
+                            <!-- <div class="mb-5">
+                                <div class="custom-control custom-checkbox">
+                                    <br>
+                                    <input type="checkbox" class="custom-control-input" id="saveOrderInfo">
+                                    <label class="custom-control-label" for="saveOrderInfo">Remember Order Information</label>
+                                </div>
+                            </div> -->
+
+                            <a type="button" data-toggle="modal" data-target="#addToCartModal" type="submit" class="btn btn-success btn-lg btn-block mb-3">
+                                Place Order Now!
+                            </a>
+                            <!-- <button class="btn btn-success btn-lg btn-block mb-3" data-toggle="modal" data-target="#addToCartModal" type="submit" href="/order">Place Order Now</button> -->
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+        <div class="modal fade" id="addToCartModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Notification from the JSMC Food Court</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">    
+                            <span aria-hidden="false">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Order Has Been Placed Successfully! Thank you for shopping!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Continue Shopping</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+
+
+
+
+
+
+
+
+foodCourtItems = [
+    {
+        "name": "Masala Khakhara",
+        "price": "$4.00",
+        "amount": "500g",
+        "ordered": True
+    }, 
+    {
+        "name": "Jeera Mari Khakhara",
+        "price": "$4.00",
+        "amount": "500g",
+        "ordered": True
+    },
+    {
+        "name": "Jeera Til Khakhara",
+        "price": "$4.00",
+        "amount": "500g",
+        "ordered": True
+    },
+    {
+        "name": "Plain Khakhara",
+        "price": "$1.40",
+        "amount": "200g",
+        "ordered": True
+    },
+    {
+        "name": "Achar Masala Khakhara",
+        "price": "$1.40",
+        "amount": "200g",
+        "ordered": True
+    },
+    {
+        "name": "Methi Khakhara",
+        "price": "$1.40",
+        "amount": "200g",
+        "ordered": True
+    },
+    {
+        "name": "Plain Papadi",
+        "price": "$3.00",
+        "amount": "9 OZ",
+        "ordered": True
+    },
+    {
+        "name": "Masala Papadi",
+        "price": "$3.00",
+        "amount": "9 OZ",
+        "ordered": True
+    },
+    {
+        "name": "Plain Sev",
+        "price": "$3.00",
+        "amount": "12 OZ",
+        "ordered": True
+    },
+    {
+        "name": "Hot Mix",
+        "price": "$3.00",
+        "amount": "12 OZ",
+        "ordered": True
+    },
+    {
+        "name": "Khatta Mitha Mix",
+        "price": "$3.00",
+        "amount": "12 OZ",
+        "ordered": True
+    },
+    {
+        "name": "Surti Mix",
+        "price": "$3.00",
+        "amount": "12 OZ",
+        "ordered": True
+    },
+    {
+        "name": "Papad Chavanu",
+        "price": "$3.00",
+        "amount": "12 OZ",
+        "ordered": True
+    },
+    {
+        "name": "Methi Para",
+        "price": "$3.00",
+        "amount": "11 OZ",
+        "ordered": True
+    },
+    {
+        "name": "Star Ganthia",
+        "price": "$3.00",
+        "amount": "12 OZ",
+        "ordered": True
+    },
+    {
+        "name": "Bhavnagri Ganthia",
+        "price": "$3.00",
+        "amount": "12 OZ",
+        "ordered": True
+    },
+    {
+        "name": "Phulvadi",
+        "price": "$3.00",
+        "amount": "12 OZ",
+        "ordered": True
+    },
+    {
+        "name": "Bikaneri Sev Bhujia",
+        "price": "$3.00",
+        "amount": "12 OZ",
+        "ordered": True
+    },
+    {
+        "name": "Ratlami Sev",
+        "price": "$3.00",
+        "amount": "12 OZ",
+        "ordered": True
+    }
+]
+
+, makh=makh, jmkh=jmkh, jtkh=jtkh, plkh=plkh, amkh=amkh, mekh=mekh, plpa=plpa, mapa=mapa, plse=plse, homi=homi, kmmi=kmmi, sumi=sumi, pach=pach, mepa=mepa, stga=stga, bhga=bhga, ph=ph, bsbh=bsbh, rase=rase
+
+
+function increment1() {
+            document.getElementById('makh').stepUp();
+
+        function increment2(){
+            document.getElementById('jmkh').stepUp();
+        }
+        function increment3(){
+            document.getElementById('jtkh').stepUp();
+        }
+        function increment4(){
+            document.getElementById('plkh').stepUp();
+        }
+        function increment5(){
+            document.getElementById('amkh').stepUp();
+        }
+        function increment6(){
+            document.getElementById('mekh').stepUp();
+        }
+        function increment7(){
+            document.getElementById('plpa').stepUp();
+        }
+        function increment8(){
+            document.getElementById('mapa').stepUp();
+        }
+        function increment9(){
+            document.getElementById('plse').stepUp();
+        }
+        function increment10(){
+            document.getElementById('homi').stepUp();
+        }
+        function increment11(){
+            document.getElementById('kmmi').stepUp();
+        }
+        function increment12(){
+            document.getElementById('sumi').stepUp();
+        }
+        function increment13(){
+            document.getElementById('pach').stepUp();
+        }
+        function increment14(){
+            document.getElementById('mepa').stepUp();
+        }
+        function increment15(){
+            document.getElementById('stga').stepUp();
+        }
+        function increment16(){
+            document.getElementById('bhga').stepUp();
+        }
+        function increment17(){
+            document.getElementById('ph').stepUp();
+        }
+        function increment18(){
+            document.getElementById('bsbh').stepUp();
+        }
+        function increment19(){
+            document.getElementById('rase').stepUp();
+        }
+        
+        function decrement() {
+            document.getElementById('makh').stepDown();
+            document.getElementById('jmkh').stepDown();
+            document.getElementById('jtkh').stepDown();
+            document.getElementById('plkh').stepDown();
+            document.getElementById('amkh').stepDown();
+            document.getElementById('mekh').stepDown();
+            document.getElementById('plpa').stepDown();
+            document.getElementById('mapa').stepDown();
+            document.getElementById('plse').stepDown();
+            document.getElementById('homi').stepDown();
+            document.getElementById('kmmi').stepDown();
+            document.getElementById('sumi').stepDown();
+            document.getElementById('pach').stepDown();
+            document.getElementById('mepa').stepDown();
+            document.getElementById('stga').stepDown();
+            document.getElementById('bhga').stepDown();
+            document.getElementById('ph').stepDown();
+            document.getElementById('bsbh').stepDown();
+            document.getElementById('rase').stepDown();
+        }
+
+
+makh = False
+jmkh = False
+jtkh = False
+plkh = False
+amkh = False
+mekh = False
+plpa = False
+mapa = False
+plse = False
+homi = False
+kmmi = False
+sumi = False
+pach = False
+mepa = False
+stga = False
+bhga = False
+ph = False
+bsbh = False
+rase = False
+total_price = 0.00
+
+global total_price
+        if request.form.get("masalakhakhara") == "makh":
+            global makh
+            makh = True
+            total_price = total_price + 4.00
+
+        if request.form.get("jeeramarikhakhara") == "jmkh":
+            global jmkh
+            jmkh = True
+            total_price = total_price + 4.00
+
+        if request.form.get("jeeratilkhakhara") == "jtkh":
+            global jtkh
+            jtkh = True
+            total_price = total_price + 4.00
+
+        if request.form.get("plainkhakhara") == "plkh":
+            global plkh
+            plkh = True
+            total_price = total_price + 1.40
+
+        if request.form.get("acharmasalakhakhara") == "amkh":
+            global amkh
+            amkh = True
+            total_price = total_price + 1.40
+
+        if request.form.get("methikhakhara") == "mekh":
+            global mekh
+            mekh = True
+            total_price = total_price + 1.40
+
+        if request.form.get("plainpapadi") == "plpa":
+            global plpa
+            plpa = True
+            total_price = total_price + 3.00
+
+        if request.form.get("masalapapadi") == "mapa":
+            global mapa
+            mapa = True
+            total_price = total_price + 3.00
+
+        if request.form.get("plainsev") == "plse":
+            global plse
+            plse = True
+            total_price = total_price + 3.00
+
+        if request.form.get("hotmix") == "homi":
+            global homi
+            homi = True
+            total_price = total_price + 3.00
+
+        if request.form.get("khattamithamix") == "kmmi":
+            global kmmi
+            kmmi = True
+            total_price = total_price + 3.00
+
+        if request.form.get("surtimix") == "sumi":
+            global sumi
+            sumi = True
+            total_price = total_price + 3.00
+
+        if request.form.get("papadchavanu") == "pach":
+            global pach
+            pach = True
+            total_price = total_price + 3.00
+
+        if request.form.get("methipara") == "mepa":
+            global mepa
+            mepa = True
+            total_price = total_price + 3.00
+
+        if request.form.get("starganthia") == "stga":
+            global stga
+            stga = True
+            total_price = total_price + 3.00
+
+        if request.form.get("bhavnagriganthia") == "bhga":
+            global bhga
+            bhga = True
+            total_price = total_price + 3.00
+
+        if request.form.get("phulvadi") == "ph":
+            global ph
+            ph = True
+            total_price = total_price + 3.00
+
+        if request.form.get("bikanerisevbhujia") == "bsbh":
+            global bsbh
+            bsbh = True
+            total_price = total_price + 3.00
+
+        if request.form.get("ratlamisev") == "rase":
+            global rase
+            rase = True
+            total_price = total_price + 3.00
+
+
+foodCourtItems = [
+    {
+        "name": "Masala Khakhara",
+        "priceForEach": "$4.00",
+        "amount": "500g",
+        "quantity": "1",
+        "addedToCart": True
+    }, 
+    {
+        "name": "Jeera Mari Khakhara",
+        "priceForEach": "$4.00",
+        "amount": "500g",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Jeera Til Khakhara",
+        "priceForEach": "$4.00",
+        "amount": "500g",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Plain Khakhara",
+        "priceForEach": "$1.40",
+        "amount": "200g",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Achar Masala Khakhara",
+        "priceForEach": "$1.40",
+        "amount": "200g",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Methi Khakhara",
+        "priceForEach": "$1.40",
+        "amount": "200g",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Plain Papadi",
+        "priceForEach": "$3.00",
+        "amount": "9 OZ",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Masala Papadi",
+        "priceForEach": "$3.00",
+        "amount": "9 OZ",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Plain Sev",
+        "priceForEach": "$3.00",
+        "amount": "12 OZ",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Hot Mix",
+        "priceForEach": "$3.00",
+        "amount": "12 OZ",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Khatta Mitha Mix",
+        "priceForEach": "$3.00",
+        "amount": "12 OZ",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Surti Mix",
+        "priceForEach": "$3.00",
+        "amount": "12 OZ",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Papad Chavanu",
+        "priceForEach": "$3.00",
+        "amount": "12 OZ",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Methi Para",
+        "priceForEach": "$3.00",
+        "amount": "11 OZ",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Star Ganthia",
+        "priceForEach": "$3.00",
+        "amount": "12 OZ",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Bhavnagri Ganthia",
+        "priceForEach": "$3.00",
+        "amount": "12 OZ",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Phulvadi",
+        "priceForEach": "$3.00",
+        "amount": "12 OZ",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Bikaneri Sev Bhujia",
+        "priceForEach": "$3.00",
+        "amount": "12 OZ",
+        "quantity": "1",
+        "addedToCart": True
+    },
+    {
+        "name": "Ratlami Sev",
+        "priceForEach": "$3.00",
+        "amount": "12 OZ",
+        "quantity": "1",
+        "addedToCart": True
+    }
+]
+
+
+
+
+class Product:
+    def __init__(self, name, amount, priceForEach, quantity, addedToCart, total_price):
+        self.name = str(name)
+        self.amount = int(amount)
+        self.priceForEach = int(priceForEach)
+        self.quantity = int(quantity)
+        self.addedToCart = bool(addedToCart)
+        self.total_price = int(total_price)
+
+    def addToCart(self):
+        self.total_price = self.total_price + self.priceForEach * self.quantity
+    def removeFromCart(self):
+        self.total_price = self.total_price - self.priceForEach * self.quantity
+
+MasalaKhakhara = Product("Masala Khakhara", )
+
+
+                        <div class="text-center">
+                            <div class="table-responsive p=4">
+                                <table class="table table-hover table-bordered">
+                                    <thead>
+                                        <th>Name:</th>
+                                        <th>Amount:</th>
+                                        <th>Price:</th>
+                                        <th>Image:</th>
+                                        <!-- <th>Quantity:</th> -->
+                                        <th>Add to Cart:</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Masala Khakhara</td>
+                                            <td>500g</td>
+                                            <td>$4.00</td>
+                                            <td><img src="static/images/masalakhakhra.jpg" alt="Image of Masala Khakhara" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="masalakhakhara" value="makh" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jeera Mari Khakhara</td>
+                                            <td>500g</td>
+                                            <td>$4.00</td>
+                                            <td><img src="static/images/jeeramarikhakhra.jpg" alt="Image of Jeera Mari Khakhara" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="jeeramarikhakhara" value="jmkh" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jeera Til Khakhara</td>
+                                            <td>500g</td>
+                                            <td>$4.00</td>
+                                            <td><img src="static/images/jeeratilkhakhra.jpg" alt="Image of Jeera Til Khakhara" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="jeeratilkhakhara" value="jtkh" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Plain Khakhara</td>
+                                            <td>200g</td>
+                                            <td>$1.40</td>
+                                            <td><img src="static/images/sadakhakhra.jpg" alt="Image of Plain Khakhara" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="plainkhakhara" value="plkh" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Achar Masala Khakhara</td>
+                                            <td>200g</td>
+                                            <td>$1.40</td>
+                                            <td><img src="static/images/acharmasalakhakhra.jpg" alt="Image of Achar Masala Khakhara" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="acharmasalakhakhara" value="amkh" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Methi Khakhara</td>
+                                            <td>200g</td>
+                                            <td>$1.40</td>
+                                            <td><img src="static/images/methikhakhra.jpg" alt="Image of Methi Khakhara" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="methikhakhara" value="mekh" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Plain Papadi</td>
+                                            <td>9 OZ</td>
+                                            <td>$3.00</td>
+                                            <td><img src="static/images/plainpapadi.jpg" alt="Image of Plain Papadi" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="plainpapadi" value="plpa" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Masala Papadi</td>
+                                            <td>9 OZ</td>
+                                            <td>$3.00</td>
+                                            <td><img src="static/images/masalapapadi.ashx" alt="Image of Masala Papadi" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="masalapapadi" value="mapa" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Plain Sev</td>
+                                            <td>12 OZ</td>
+                                            <td>$3.00</td>
+                                            <td><img src="static/images/plainsev.jpg" alt="Image of Plain Sev" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="plainsev" value="plse" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hot Mix</td>
+                                            <td>12 OZ</td>
+                                            <td>$3.00</td>
+                                            <td><img src="static/images/hotmix.jpg" alt="Image of Hot Mix" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="hotmix" value="homi" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Khatta Mitha Mix</td>
+                                            <td>12 OZ</td>
+                                            <td>$3.00</td>
+                                            <td><img src="static/images/khattamithamix.jpeg" alt="Image of Khatta Mitha Mix" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="khattamithamix" value="kmmi" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Surti Mix</td>
+                                            <td>12 OZ</td>
+                                            <td>$3.00</td>
+                                            <td><img src="static/images/surtimix.jpg" alt="Image of Surti Mix" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="surtimix" value="sumi" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Papad Chavanu</td>
+                                            <td>12 OZ</td>
+                                            <td>$3.00</td>
+                                            <td><img src="static/images/papadchavanu.jpg" alt="Image of Papad Chavanu" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="papadchavanu" value="pach" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Methi Para</td>
+                                            <td>11 OZ</td>
+                                            <td>$3.00</td>
+                                            <td><img src="static/images/methipara.jpg" alt="Image of Methi Para" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="methipara" value="mepa" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Star Ganhtia</td>
+                                            <td>12 OZ</td>
+                                            <td>$3.00</td>
+                                            <td><img src="static/images/stargathia.jpg" alt="Image of Star Ganthia" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="starganthia" value="stga" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bhavnagri Ganhtia</td>
+                                            <td>12 OZ</td>
+                                            <td>$3.00</td>
+                                            <td><img src="static/images/bhavgathiya.png" alt="Image of Bhavnagri Ganthia" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="bhavnagriganthia" value="bhga" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Phulvadi</td>
+                                            <td>11 OZ</td>
+                                            <td>$3.00</td>
+                                            <td><img src="static/images/phulvadi.jpg" alt="Image of Phulvadi" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="phulvadi" value="ph" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bikaneri Sev Bhujia</td>
+                                            <td>12 OZ</td>
+                                            <td>$3.00</td>
+                                            <td><img src="static/images/bikasevbhuji.jfif" alt="Image of Bikaneri Sev Bhujia" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="bikanerisevbhujia" value="bsbh" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ratlami Sev</td>
+                                            <td>12 OZ</td>
+                                            <td>$3.00</td>
+                                            <td><img src="static/images/ratlamisev.jpg" alt="Image of Bikaneri Sev Bhujia" width=100 height=75></td>
+                                            <!-- <td>
+                                                <div class="quantity buttons_added">
+                                                    <input type="number" id="quantity" name="tentacles" min="10" max="100">
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                <form method="POST" action="/" enctype="multipart/form-data">
+                                                    <button name="ratlamisev" value="rase" class="btn btn-success m-3">Add to Cart</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+
+
+
+
+
+<!-- <div id="carouselExampleIndicators" class="carousel slide container-fluid" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="static/images/indianfood1.jpg" alt="First slide" height="700">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="static/images/indianfood2.jpg" alt="Second slide" height="700">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="static/images/indianfood3.jpg" alt="Third slide" height="700">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div> -->
+
+
+
+    imageSrcs = [
+        "static/images/masalakhakhra.jpg",
+        "static/images/jeeramarikhakhra.jpg",
+        "static/images/jeeratilkhakhra.jpg",
+        "static/images/sadakhakhra.jpg",
+        "static/images/acharmasalakhakhra.jpg",
+        "static/images/methikhakhra.jpg",
+        "static/images/plainpapadi.jpg",
+        "static/images/masalapapadi.ashx",
+        "static/images/plainsev.jpg",
+        "static/images/hotmix.jpg",
+        "static/images/khattamithamix.jpeg",
+        "static/images/surtimix.jpg",
+        "static/images/papadchavanu.jpg",
+        "static/images/methipara.jpg",
+        "static/images/stargathia.jpg",
+        "static/images/bhavgathiya.png",
+        "static/images/phulvadi.jpg",
+        "static/images/bikasevbhuji.jfif",
+        "static/images/ratlamisev.jpg"
+    ]
+
+    names = [
+        "Masala Khakhara",
+        "Jeera Mari Khakhara",
+        "Jeera Til Khakhara",
+        "Plain Khakhara",
+        "Achar Masala Khakhara",
+        "Methi Khakhara",
+        "Plain Papadi",
+        "Masala Papadi",
+        "Plain Sev",
+        "Hot Mix",
+        "Khatta Mitha Mix",
+        "Surti Mix",
+        "Papad Chavanu",
+        "Methi Para",
+        "Star Ganthia",
+        "Bhavnagri Ganthia",
+        "Phulvadi",
+        "Bikaneri Sev Bhujia",
+        "Ratlami Sev",
+    ]
+
+    amounts = [
+        "500g",
+        "500g",
+        "500g",
+        "200g",
+        "200g",
+        "200g",
+        "9 OZ",
+        "9 OZ",
+        "12 OZ",
+        "12 OZ",
+        "12 OZ",
+        "12 OZ",
+        "12 OZ",
+        "11 OZ",
+        "12 OZ",
+        "12 OZ",
+        "11 OZ",
+        "12 OZ",
+        "12 OZ",
+    ]
+
+    pricesForEach = [
+        "$4.00",
+        "$4.00",
+        "$4.00",
+        "$1.40",
+        "$1.40",
+        "$1.40",
+        "$3.00",
+        "$3.00",
+        "$3.00",
+        "$3.00",
+        "$3.00",
+        "$3.00",
+        "$3.00",
+        "$3.00",
+        "$3.00",
+        "$3.00",
+        "$3.00",
+        "$3.00",
+        "$3.00",
+    ]
+
+
+<div class="text-center">
+            <div class="row m-4" style="display: inline-block;">
+                <div class="card">
+                    <div class="text-center">
+                        <div class="m-3">
+                            <img class="mb-3" src="{{ lunchSpecial[0] }}" width=250 height=200>
+                            <h4><b>{{ lunchSpecial[1] }}</b></h4>
+                            <p class="price mt-3">{{ lunchSpecial[2] }}</p>
+                            <p>{{ lunchSpecial[3] }}</p>
+                            <p><button class="btn btn-success">Add to Cart</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-4" style="display: inline-block;">
+                <div class="card">
+                    <div class="text-center">
+                        <div class="m-3">
+                            <img class="mb-3" src="{{ basundi[0] }}" width=250 height=200>
+                            <h4><b>{{ basundi[1] }}</b></h4>
+                            <p class="price">{{ basundi[3] }}</p>
+                            <p>{{ basundi[2] }}</p>
+                            <br>
+                            <br>
+                            <br>
+                            <p><button class="btn btn-success">Add to Cart</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-4" style="display: inline-block;">
+                <div class="card">
+                    <div class="text-center">
+                        <div class="m-3">
+                            <img class="mb-3" src="{{ bhajinabhajiya[0] }}" width=250 height=200>
+                            <h4><b>{{ bhajinabhajiya[1] }} <br><small>with Marcha</small></b></h4>
+                            <p class="price">{{ bhajinabhajiya[3] }}</p>
+                            <p>{{ bhajinabhajiya[2] }}</p>
+                            <br>
+                            <br>
+                            <p><button class="btn btn-success">Add to Cart</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <hr>
+        </div>
+        <div class="container-fluid mt-3">
+            <br>
+            <legend><b>Khakharas</b></legend>
+            <hr>
+        </div>
+        <div>
+            <div class="text-center">
+                <div class="row m-4" style="display: inline-block;">
+                    <div class="card">
+                        <div class="text-center">
+                        <div class="m-3">
+                            <img class="mb-3" src="{{ jekh[0] }}" width=250 height=200>
+                            <h4><b>{{ jekh[1] }}</b></h4>
+                            <p class="price mt-3">{{ jekh[3] }}</p>
+                            <p>{{ jekh[2] }}</p>
+                            <p><button class="btn btn-success">Add to Cart</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="row m-4" style="display: inline-block;">
+                    <div class="card">
+                        <div class="text-center">
+                        <div class="m-3">
+                            <img class="mb-3" src="{{ kmkh[0] }}" width=250 height=200>
+                            <h4><b>{{ kmkh[1] }}</b></h4>
+                            <p class="price mt-3">{{ kmkh[3] }}</p>
+                            <p>{{ kmkh[2] }}</p>
+                            <p><button class="btn btn-success">Add to Cart</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="row m-4" style="display: inline-block;">
+                    <div class="card">
+                        <div class="text-center">
+                        <div class="m-3">
+                            <img class="mb-3" src="{{ makh[0] }}" width=250 height=200>
+                            <h4><b>{{ makh[1] }}</b></h4>
+                            <p class="price mt-3">{{ makh[3] }}</p>
+                            <p>{{ makh[2] }}</p>
+                            <p><button class="btn btn-success">Add to Cart</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="row m-4" style="display: inline-block;">
+                    <div class="card">
+                        <div class="text-center">
+                        <div class="m-3">
+                            <img class="mb-3" src="{{ jmkh[0] }}" width=250 height=200>
+                            <h4><b>{{ jmkh[1] }}</b></h4>
+                            <p class="price mt-3">{{ jmkh[3] }}</p>
+                            <p>{{ jmkh[2] }}</p>
+                            <p><button class="btn btn-success">Add to Cart</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+, jekh=jekh, kmkh=kmkh, makh=makh, jmkh=jmkh, plkh=plkh, amkh=amkh, mekh=mekh, 
+    plpa=plpa, mapa=mapa, plse=plse, homi=homi, kmmi=kmmi, sumi=sumi, pach=pach, mepa=mepa, stga=stga, bhga=bhga,
+    ph=ph, bsbh=bsbh, rase=rase, rach=rach, sspa=sspa, drka=drka, bh=bh, vaga=vaga, sh=sh, guja=guja, ragu=ragu,
+    gcla=gcla, ma=ma, lunchSpecial=lunchSpecial, basundi=basundi, bhajinabhajiya=bhajinabhajiya
+
+
+
+<-------------------------------------------------------------------------- INFO --------------------------------------------------------------->
+
+
+    # Khakhara Info:
+    jekh = ["static/images/jeerakhakhara.png", "Jeera Khakhara", "500g", "$4.00"]
+    kmkh = ["static/images/kothmirmarchakhakhara.jpg", "Kothmir Marcha Khakhara", "500g", "$4.00"]
+    makh = ["static/images/masalakhakhra.jpg", "Masala Khakhara", "200g", "$1.50"]
+    jmkh = ["static/images/jeeramarikhakhra.jpg", "Jeera Mari Khakhara", "200g", "$1.50"]
+    plkh = ["static/images/sadakhakhra.jpg", "Plain Khakhara", "200g", "$1.50"]
+    amkh = ["static/images/acharmasalakhakhra.jpg", "Achar Masala Khakhara", "200g", "$1.50"]
+    mekh = ["static/images/methikhakhra.jpg", "Methi Khakhara", "200g", "$1.50"]
+
+    # Dry Snacks Info:
+    plpa = ["static/images/plainpapadi.jpg", "Plain Papadi", "9 OZ", "$3.00"]
+    mapa = ["static/images/masalapapadi.ashx", "Masala Papadi", "9 OZ", "$3.00"]
+    plse = ["static/images/plainsev.jpg", "Plain Sev", "12 OZ", "$3.00"]
+    homi = ["static/images/hotmix.jpg", "Hot Mix", "12 OZ", "$3.00"]
+    kmmi = ["static/images/khattamithamix.jpeg", "Khatta Mitha Mix", "12 OZ", "$3.00"]
+    sumi = ["static/images/surtimix.jpg", "Surti Mix", "12 OZ", "$3.00"]
+    pach = ["static/images/papadchavanu.jpg", "Papad Chavanu", "12 OZ", "$3.00"]
+    mepa = ["static/images/methipara.jpg", "Methi Para", "12 OZ", "$3.00"]
+    stga = ["static/images/stargathia.jpg", "Star Ganthia", "11 OZ", "$3.00"]
+    bhga = ["static/images/bhavgathiya.png", "Bhavnagri Ganthia", "12 OZ", "$3.00"]
+    ph = ["static/images/phulvadi.jpg", "Phulvadi", "11 OZ", "$3.00"]
+    bsbh = ["static/images/bikasevbhuji.jfif", "Bikaneri Sev Bhujia", "12 OZ", "$3.00"]
+    rase = ["static/images/ratlamisev.jpg", "Ratlami Sev", "12 OZ", "$3.00"]
+    rach = ["static/images/ratlamisev.jpg", "Rajwadi Chevado", "12 OZ", "$3.00"]
+    sspa = ["static/images/ratlamisev.jpg", "Sweet Sakkar Para", "11 OZ", "$3.00"]
+    drka = ["static/images/ratlamisev.jpg", "Dry Kachori", "11 OZ", "$3.00"]
+    bh = ["static/images/ratlamisev.jpg", "Bhakarwadi", "11 OZ", "$3.00"]
+    vaga = ["static/images/ratlamisev.jpg", "Vanela Ganthia", "12 OZ", "$3.00"]
+
+    # Sweets Info:
+    sh = ["static/images/shrikhand.jfif", "Shrikhand", "1 LB", "$6.00"]
+    guja = ["static/images/gulabjamun.jpg", "Gulab Jamun", "12pcs", "$4.00"]
+    ragu = ["static/images/rasgulla.jpg", "Ras Gulla", "8pcs", "$4.00"]
+    gcla = ["static/images/churmanuladoo.jpg", "Gud Churmana Ladoo", "1 LB", "$6.00"]
+    ma = ["static/images/magaj.jpg", "Magaj", "14 OZ", "$6.00"]
+    
+    # Specials Info:
+    lunchSpecial = ["static/images/lunchspecial.jpg", "Lunch Special", "$10.00", "Includes: Basundi, Bhaji na Bhajiya, Bhinda-Capsicum-Tomato-Shaak, Kala Chana, Puri, Jeera Rice, Dal Fry"]
+    basundi = ["static/images/basundi.webp", "Basundi", "1 LB", "$6.00"]
+    bhajinabhajiya = ["static/images/bhajinabhajiya.jpg", "Bhaji na Bhajiya", "8pcs", "$4.00"]
+
+
+
+class orderForm(FlaskForm):
+    firstname = StringField("First Name", validators=[DataRequired(), Length(min=2, max=25)])
+    lastname = StringField("Last Name", validators=[DataRequired(), Length(min=2, max=25)])
+    email = StringField("Email", validators=[DataRequired(), Email()])
+    phonenumber = StringField("Phone Number", validators=[DataRequired()])
+    
+    street = StringField("Street", validators=[DataRequired()])
+    city = StringField("City", validators=[DataRequired()])
+    state = StringField("State / Province", validators=[DataRequired()])
+    postalzip = StringField("Postal / Zip Code", validators=[DataRequired()])
+    
+    ccnum = StringField("Credit Card Number", validators=[DataRequired()])
+    seccode = StringField("Security Code", validators=[DataRequired()])
+    ccexpidate = StringField("Credit Card Expiration Date", validators=[DataRequired()])
+       
+    submit = SubmitField("Place Order Now!")
+
+
+
+
+, jekh=jekh, kmkh=kmkh, makh=makh, jmkh=jmkh, plkh=plkh, amkh=amkh, mekh=mekh, 
+    plpa=plpa, mapa=mapa, plse=plse, homi=homi, kmmi=kmmi, sumi=sumi, pach=pach, mepa=mepa, stga=stga, bhga=bhga,
+    ph=ph, bsbh=bsbh, rase=rase, rach=rach, sspa=sspa, drka=drka, bh=bh, vaga=vaga, sh=sh, guja=guja, ragu=ragu,
+    gcla=gcla, ma=ma, lunchSpecial=lunchSpecial, basundi=basundi, bhajinabhajiya=bhajinabhajiya
+
+
+from app import db
+from app.models import User, Cart, Product
+
+# Khakhara:
+jekh = Product(image_file="static/images/jeerakhakhara.png", name="Jeera Khakahara", )
+kmkh =
+makh =
+jmkh =
+plkh =
+amkh =
+mekh =
+
+# Dry Snacks:
+plpa =
+mapa =
+plse =
+homi =
+kmmi =
+sumi =
+pach =
+mepa =
+stga =
+bhga =
+ph =
+bsbh = 
+rase = 
+rach = 
+sspa = 
+drka = 
+bh = 
+vaga = 
+
+# Sweets:
+sh = 
+guja = 
+ragu =
+gcla =
+ma =
+
+# Specials:
+lunchSpecial = 
+basundi =
+bhajinabhajiya =
+
+from app.models import db, User, Cart, Product
+
+# Khakhara:
+jekh = Product(image_file=url_for('static', filename='jeerakhakhara.png'), name="", amount="", priceForEach="", quantity="")
+kmkh = Product(image_file=url_for('static', filename='kothmirmarchakhakhara.jpg'), name="", amount="", priceForEach="", quantity="")
+makh = Product(image_file=url_for('static', filename='masalakhakhra.jpg'), name="", amount="", priceForEach="", quantity="")
+jmkh = Product(image_file=url_for('static', filename='jeeramarikhakhra.jpg'), name="", amount="", priceForEach="", quantity="")
+plkh = Product(image_file=url_for('static', filename='sadakhakhra.jpg'), name="", amount="", priceForEach="", quantity="")
+amkh = Product(image_file=url_for('static', filename='acharmasalakhakhra.jpg'), name="", amount="", priceForEach="", quantity="")
+mekh = Product(image_file=url_for('static', filename='methikhakhra.jpg'), name="", amount="", priceForEach="", quantity="")
+
+# Dry Snacks:
+plpa = Product(image_file=url_for('static', filename='plainpapadi.jpg'), name="", amount="", priceForEach="", quantity="")
+mapa = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+plse = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+homi = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+kmmi = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+sumi = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+pach = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+mepa = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+stga = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+bhga = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+ph = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+bsbh = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+rase = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+rach = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+sspa = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+drka = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+bh = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+vaga = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+
+# Sweets:
+sh = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+guja = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+ragu = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+gcla = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+ma = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+
+# Specials:
+lunchSpecial = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+basundi = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+bhajinabhajiya = Product(image_file=url_for('static', filename='profile_pics/'), name="", amount="", priceForEach="", quantity="")
+
+
+
+   <div class="container-fluid mt-3">
+            <br>
+            <legend><b>Specials</b></legend>
+            <hr>
+        </div>
+        <div class="container-fluid">
+            <table class="table table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th class="text-center" scope="col">Image</th>
+                    <th class="text-center" scope="col">Name</th>
+                    <th class="text-center" scope="col">Amount</th>
+                    <th class="text-center" scope="col">Price</th>
+                    <th class="text-center" scope="col">Add To Cart</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center"><img src="{{ lunchSpecial[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ lunchSpecial[1] }}</td>
+                        <td class="text-center"><p>Includes:<br>Basundi,<br> Bhaji na Bhajiya,<br> Bhinda-Capsicum-Tomato-Shaak,<br> Kala Chana,<br> Puri, Jeera Rice, Dal Fry</p><br><p style="font-size: larger;">Available on Sunday, April 18th Only</td>
+                        <td class="text-center">{{ lunchSpecial[3] }}</td>
+                        <td class="text-center">
+                            <form method="POST" action="/" enctype="multipart/form-data">
+                                <button type="submit" name="lunchSpecial" value="lunchSpecial" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ basundi[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ basundi[1] }}</td>
+                        <td class="text-center">{{ basundi[2] }}<br><br><p style="font-size: larger;">Available on Sunday, April 18th Only</td>
+                        <td class="text-center">{{ basundi[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" enctype="multipart/form-data">
+                                <button type="submit" name="basundi" value="basundi" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ bhajinabhajiya[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ bhajinabhajiya[1] }}</td>
+                        <td class="text-center">{{ bhajinabhajiya[2] }}<br><br><p style="font-size: larger;">Available on Sunday, April 18th Only</p></td>
+                        <td class="text-center">{{ bhajinabhajiya[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="bhajinabhajiya" value="bhajinabhajiya" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+
+        <div class="container-fluid mt-3">
+            <br>
+            <legend><b>Sweets</b></legend>
+            <hr>
+        </div>
+        <div class="container-fluid">
+            <table class="table table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th class="text-center" scope="col">Image</th>
+                    <th class="text-center" scope="col">Name</th>
+                    <th class="text-center" scope="col">Amount</th>
+                    <th class="text-center" scope="col">Price</th>
+                    <th class="text-center" scope="col">Add To Cart</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center"><img src="{{ sh[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ sh[1] }}</td>
+                        <td class="text-center">{{ sh[2] }}</td>
+                        <td class="text-center">{{ sh[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="sh" value="sh" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ guja[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ guja[1] }}</td>
+                        <td class="text-center">{{ guja[2] }}</td>
+                        <td class="text-center">{{ guja[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="guja" value="guja" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ ragu[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ ragu[1] }}</td>
+                        <td class="text-center">{{ ragu[2] }}</td>
+                        <td class="text-center">{{ ragu[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="ragu" value="ragu" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ gcla[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ gcla[1] }}</td>
+                        <td class="text-center">{{ gcla[2] }}</td>
+                        <td class="text-center">{{ gcla[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="gcla" value="gcla" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ ma[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ ma[1] }}</td>
+                        <td class="text-center">{{ ma[2] }}</td>
+                        <td class="text-center">{{ ma[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="ma" value="ma" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+                
+            </table>
+
+        <div class="container-fluid mt-3">
+            <br>
+            <legend><b>Khakharas</b></legend>
+            <hr>
+        </div>
+        <div class="container-fluid">
+            <table class="table table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th class="text-center" scope="col">Image</th>
+                    <th class="text-center" scope="col">Name</th>
+                    <th class="text-center" scope="col">Amount</th>
+                    <th class="text-center" scope="col">Price</th>
+                    <th class="text-center" scope="col">Add To Cart</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center"><img src="{{ jekh[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ jekh[1] }}</td>
+                        <td class="text-center">{{ jekh[2] }}</td>
+                        <td class="text-center">{{ jekh[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="jekh" value="jekh" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ kmkh[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ kmkh[1] }}</td>
+                        <td class="text-center">{{ kmkh[2] }}</td>
+                        <td class="text-center">{{ kmkh[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="kmkh" value="kmkh" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ makh[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ makh[1] }}</td>
+                        <td class="text-center">{{ makh[2] }}</td>
+                        <td class="text-center">{{ makh[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="makh" value="makh" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ jmkh[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ jmkh[1] }}</td>
+                        <td class="text-center">{{ jmkh[2] }}</td>
+                        <td class="text-center">{{ jmkh[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="jmkh" value="jmkh" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ plkh[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ plkh[1] }}</td>
+                        <td class="text-center">{{ plkh[2] }}</td>
+                        <td class="text-center">{{ plkh[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="plkh" value="plkh" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ amkh[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ amkh[1] }}</td>
+                        <td class="text-center">{{ amkh[2] }}</td>
+                        <td class="text-center">{{ amkh[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="amkh" value="amkh" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ mekh[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ mekh[1] }}</td>
+                        <td class="text-center">{{ mekh[2] }}</td>
+                        <td class="text-center">{{ mekh[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="mekh" value="mekh" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+
+
+        <div class="container-fluid mt-3">
+            <br>
+            <legend><b>Dry Snacks</b></legend>
+            <hr>
+        </div>
+        <div class="container-fluid">
+            <table class="table table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th class="text-center" scope="col">Image</th>
+                    <th class="text-center" scope="col">Name</th>
+                    <th class="text-center" scope="col">Amount</th>
+                    <th class="text-center" scope="col">Price</th>
+                    <th class="text-center" scope="col">Add To Cart</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center"><img src="{{ plpa[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ plpa[1] }}</td>
+                        <td class="text-center">{{ plpa[2] }}</td>
+                        <td class="text-center">{{ plpa[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="plpa" value="plpa" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ mapa[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ mapa[1] }}</td>
+                        <td class="text-center">{{ mapa[2] }}</td>
+                        <td class="text-center">{{ mapa[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="mapa" value="mapa" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ plse[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ plse[1] }}</td>
+                        <td class="text-center">{{ plse[2] }}</td>
+                        <td class="text-center">{{ plse[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="plse" value="plse" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ homi[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ homi[1] }}</td>
+                        <td class="text-center">{{ homi[2] }}</td>
+                        <td class="text-center">{{ homi[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="homi" value="homi" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ kmmi[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ kmmi[1] }}</td>
+                        <td class="text-center">{{ kmmi[2] }}</td>
+                        <td class="text-center">{{ kmmi[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="kmmi" value="kmmi" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ sumi[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ sumi[1] }}</td>
+                        <td class="text-center">{{ sumi[2] }}</td>
+                        <td class="text-center">{{ sumi[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="sumi" value="sumi" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ pach[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ pach[1] }}</td>
+                        <td class="text-center">{{ pach[2] }}</td>
+                        <td class="text-center">{{ pach[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="pach" value="pach" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ mepa[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ mepa[1] }}</td>
+                        <td class="text-center">{{ mepa[2] }}</td>
+                        <td class="text-center">{{ mepa[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="mepa" value="mepa" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ stga[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ stga[1] }}</td>
+                        <td class="text-center">{{ stga[2] }}</td>
+                        <td class="text-center">{{ stga[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="stga" value="stga" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ bhga[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ bhga[1] }}</td>
+                        <td class="text-center">{{ bhga[2] }}</td>
+                        <td class="text-center">{{ bhga[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="bhga" value="bhga" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ ph[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ ph[1] }}</td>
+                        <td class="text-center">{{ ph[2] }}</td>
+                        <td class="text-center">{{ ph[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="ph" value="ph" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ bsbh[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ bsbh[1] }}</td>
+                        <td class="text-center">{{ bsbh[2] }}</td>
+                        <td class="text-center">{{ bsbh[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="bsbh" value="bsbh" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ rase[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ rase[1] }}</td>
+                        <td class="text-center">{{ rase[2] }}</td>
+                        <td class="text-center">{{ rase[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="rase" value="rase" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ rach[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ rach[1] }}</td>
+                        <td class="text-center">{{ rach[2] }}</td>
+                        <td class="text-center">{{ rach[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="rach" value="rach" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ sspa[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ sspa[1] }}</td>
+                        <td class="text-center">{{ sspa[2] }}</td>
+                        <td class="text-center">{{ sspa[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="sspa" value="sspa" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ drka[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ drka[1] }}</td>
+                        <td class="text-center">{{ drka[2] }}</td>
+                        <td class="text-center">{{ drka[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="drka" value="drka" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ bh[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ bh[1] }}</td>
+                        <td class="text-center">{{ bh[2] }}</td>
+                        <td class="text-center">{{ bh[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="bh" value="bh" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><img src="{{ vaga[0] }}" width=200 height=150></td>
+                        <td class="text-center">{{ vaga[1] }}</td>
+                        <td class="text-center">{{ vaga[2] }}</td>
+                        <td class="text-center">{{ vaga[3] }}</td>
+                        <td class="text-center">
+                            <form action="/" method="POST" encytpe="multipart/form-data">
+                                <button type="submit" name="vaga" value="vaga" class="text-center btn btn-info">Add To Cart</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+
+
+
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('#') }}">Place Order</a>
+        </li> -->
+
+
+
+        
+    if specials and sweets and drysnacks and khakharas:
+        pass
+    else:
+        addingAllDrySnacks()
+        addingAllKhakharas()
+        addingAllSpecials()
+        addingAllSweets()
+        db.session.commit()
+    specials = SpecialsProduct.query.all()
+    sweets = SweetsProduct.query.all()
+    drysnacks = DrySnacksProduct.query.all()
+    khakharas = KhakharasProduct.query.all()
+
+    from app import db, app
+from app.models import SpecialsProduct, DrySnacksProduct, SweetsProduct, KhakharasProduct
+
+def addItemToSpecialsDB(image_file, name, amount, priceForEach):
+    specialItem = SpecialsProduct(image_file=image_file, name=name, amount=amount, priceForEach=priceForEach)
+    db.session.add(specialItem)
+    db.session.commit()
+def addItemToDrySnacksDB(image_file, name, amount, priceForEach):
+    drysnackItem = DrySnacksProduct(image_file=image_file, name=name, amount=amount, priceForEach=priceForEach)
+    db.session.add(drysnackItem)
+    db.session.commit()
+def addItemToSweetsDB(image_file, name, amount, priceForEach):
+    sweetItem = SweetsProduct(image_file=image_file, name=name, amount=amount, priceForEach=priceForEach)
+    db.session.add(sweetItem)
+    db.session.commit()
+def addItemToKhakharasDB(image_file, name, amount, priceForEach):
+    khakharaItem = KhakharasProduct(image_file=image_file, name=name, amount=amount, priceForEach=priceForEach)
+    db.session.add(khakharaItem)
+    db.session.commit()
+
+# def addingAllKhakharas():
+#     # Khakharas:
+#     addItemToKhakharasDB("/static/images/jeerakhakhara.png", "Jeera Khakhara", "500g", "$4.00")
+#     addItemToKhakharasDB("/static/images/kothmirmarchakhakhara.jpg", "Kothmir Marcha Khakahra", "500g", "$4.00")
+#     addItemToKhakharasDB("/static/images/masalakhakhra.jpg", "Masala Khakhara", "200g", "$1.50")
+#     addItemToKhakharasDB("/static/images/jeeramarikhakhra.jpg", "Jeera Mari Khakhara", "200g", "$1.50")
+#     addItemToKhakharasDB("/static/images/sadakhakhra.jpg", "Sada Khakhara", "200g", "$1.50")
+#     addItemToKhakharasDB("/static/images/acharmasalakhakhra.jpg", "Achar Masala Khakhara", "200g", "$1.50")
+#     addItemToKhakharasDB("/static/images/methikhakhra.jpg", "Methi Khakhara", "200g", "$1.50")
+# def addingAllDrySnacks():
+#     # Dry Snacks:
+#     addItemToDrySnacksDB("/static/images/plainpapadi.jpg", "Plain Papadi", "9 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/masalapapadi.ashx", "Masala Papadi", "9 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/plainsev.jpg", "Plain Sev", "12 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/hotmix.jpg", "Hot Mix", "12 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/khattamithamix.jpeg", "Khatta Mitha Mix", "12 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/surtimix.jpg", "Surti Mix", "12 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/papadchavanu.jpg", "Papad Chavanu", "12 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/methipara.jpg", "Methi Para", "12 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/stargathia.jpg", "Star Ganthia", "11 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/bhavgathiya.png", "Bhav Gathiya", "12 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/phulvadi.jpg", "Phulvadi", "11 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/bikasevbhuji.jfif", "Bikaneri Sev Bhujia", "12 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/ratlamisev.jpg", "Ratlami Sev", "12 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/rajwadichevado.png", "Rajwadi Chevado", "12 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/sweetsakarpara.jpg", "Sweet Sakkar Para", "11 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/drykachodi.jpg", "Dry Kachori", "11 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/bhakarwadi.jpg", "Bhakarwadi", "11 OZ", "$3.00")
+#     addItemToDrySnacksDB("/static/images/vanelaganthiya.jpeg", "Vanela Ganthia", "12 OZ", "$3.00")
+# def addingAllSweets():
+#     # Sweets:
+#     addItemToSweetsDB("/static/images/shrikhand.jfif", "Shrikhand", "1 LB", "$6.00")
+#     addItemToSweetsDB("/static/images/gulabjamun.jpg", "Gulab Jamun", "12pcs", "$4.00")
+#     addItemToSweetsDB("/static/images/rasgulla.jpg", "Rasgulla", "8pcs", "$4.00")
+#     addItemToSweetsDB("/static/images/churmanuladoo.jpg", "Churmanu Ladoo", "1 LB", "$6.00")
+#     addItemToSweetsDB("/static/images/magaj.jpg", "Magaj", "14 OZ", "$6.00")
+# def addingAllSpecials():
+#     # Specials:
+#     addItemToSpecialsDB("/static/images/lunchspecial.jpg", "Lunch Special", "Rasmalai, Mutter Paneer, Dal Makhani, Samosa, Paratha, Jeera Rice, Pickles", "$10.00")
+#     addItemToSpecialsDB("/static/images/basundi.webp", "Basundi", "1 LB", "$6.00")
+#     addItemToSpecialsDB("/static/images/bhajinabhajiya.jpg", "Bhaji na Bhajiya", "8pcs", "$4.00")
+
+
+@app.route("/account_billing", methods=["GET", "POST"])
+@login_required
+def account_billing():
+    form = BillingAccountForm()
+    if form.validate_on_submit():
+        ccnum = form.creditcardnum.data
+        ccnum = ccnum.strip()
+        if "a" or "b" or "c" or "d" or "e" or "f" or "g" or "h" or "i" or "j" or "k" or "l" or "m" or "n" or "o" or "p" or "q" or "r" or "s" or "t" or "u" or "v" or "w" or "x" or "y" or "z" in str(ccnum):
+            flash("Invalid credit card number. Please check your input.")
+        ccnum = int(ccnum)
+        ccnumlist = list(ccnum)
+        ccnum_check_digit = ccnumlist.pop()
+        ccnumlist.reverse()
+        processed_digits = []
+        for index, digit in enumerate(ccnumlist):
+            if index % 2 == 0:
+                doubled_digit = int(digit) * 2
+                if doubled_digit > 9:
+                    doubled_digit = doubled_digit - 9
+                processed_digits.append(doubled_digit)
+            else:
+                processed_digits.append(int(digit))
+        total = int(ccnum_check_digit) + sum(processed_digits)
+        if total % 10 == 0:
+            billinginfo = User(creditcardnum=form.creditcardnum.data, securitycode=form.securitycode.data, expirationdate=form.expirationdate.data)
+            db.session.add(billinginfo)
+            db.session.commit()
+            flash("Billing Information successfully submitted!", "success")
+            return redirect(url_for('account'))
+        else:
+            flash("Billing Information unsuccessful. Please check your input.", "danger")
+    elif request.method == "GET":
+        form.creditcardnum.data = current_user.creditcardnum
+        form.securitycode.data = current_user.securitycode
+        form.expirationdate.data = current_user.expirationdate
+    return render_template("account_billing.html", title="Account Billing Information", form=form)
+
+
+
+
+
+def AddingSpecialProductsToCart():
+    specialsform = AddToCartSpecialsForm()
+    added_specials_product = request.form.get('itemaddedtospecialscart')
+    added_specials_product_object = SpecialsProduct.query.filter_by(name=added_specials_product).first()
+    product_name = str(added_specials_product_object.name)
+    product_amount = str(added_specials_product_object.amount)
+    product_price = float(added_specials_product_object.priceForEach)
+    quantity_of_product = specialsform.quantity.data
+    total_price = product_price * int(quantity_of_product)
+    buyer = current_user.id
+    cart_product = Cart(name=product_name, amount=product_amount, priceForEach=product_price, quantity=quantity_of_product, total_price=total_price, user_id=buyer)
+    db.session.add(cart_product)
+    db.session.commit()
+
+def AddingSweetProductsToCart():
+    sweetsform = AddToCartSweetsForm()
+    added_sweets_product = request.form.get('itemaddedtosweetscart')
+    added_sweets_product_object = SweetsProduct.query.filter_by(name=added_sweets_product).first()
+    product_name = str(added_sweets_product_object.name)
+    product_amount = str(added_sweets_product_object.amount)
+    product_price = float(added_sweets_product_object.priceForEach)
+    quantity_of_product = sweetsform.quantity.data
+    total_price = product_price * int(quantity_of_product)
+    buyer = current_user.id
+    cart_product = Cart(name=product_name, amount=product_amount, priceForEach=product_price, quantity=quantity_of_product, total_price=total_price, user_id=buyer)
+    db.session.add(cart_product)
+    db.session.commit()
+def AddingKhakharaProductsToCart():
+    khakharasform = AddToCartKhakharasForm()
+    added_khakharas_product = request.form.get('itemaddedtokhakharascart')
+    added_khakharas_product_object = KhakharasProduct.query.filter_by(name=added_khakharas_product).first()
+    product_name = str(added_khakharas_product_object.name)
+    product_amount = str(added_khakharas_product_object.amount)
+    product_price = float(added_khakharas_product_object.priceForEach)
+    quantity_of_product = khakharasform.quantity.data
+    total_price = product_price * int(quantity_of_product)
+    buyer = current_user.id
+    cart_product = Cart(name=product_name, amount=product_amount, priceForEach=product_price, quantity=quantity_of_product, total_price=total_price, user_id=buyer)
+    db.session.add(cart_product)
+    db.session.commit()
+def AddingDrySnackProductsToCart():
+    drysnacksform = AddToCartDrySnacksForm()
+    added_drysnacks_product = request.form.get('itemaddedtodrysnackscart')
+    added_drysnacks_product_object = DrySnacksProduct.query.filter_by(name=added_drysnacks_product).first()
+    product_name = str(added_drysnacks_product_object.name)
+    product_amount = str(added_drysnacks_product_object.amount)
+    product_price = float(added_drysnacks_product_object.priceForEach)
+    quantity_of_product = drysnacksform.quantity.data
+    total_price = product_price * int(quantity_of_product)
+    buyer = current_user.id
+    cart_product = Cart(name=product_name, amount=product_amount, priceForEach=product_price, quantity=quantity_of_product, total_price=total_price, user_id=buyer)
+    db.session.add(cart_product)
+    db.session.commit()
+
+
+
+
+    # elif request.method == "GET":
+    #     form.creditcardnum.data = current_user.creditcardnum
+    #     form.securitycode.data = current_user.securitycode
+    #     form.expirationdate.data = current_user.expirationdate
+    #     form.street.data = current_user.street
+    #     form.city.data = current_user.city
+    #     form.state.data = current_user.state
+    #     form.postalzip.data = current_user.postalzip
+
+
+
+
+
+{% for product in specials %}
+                    <div class="card ml-3 mr-3 mt-3 h-100" style="display: inline-block">
+                        <img src="{{ product.image_file }}" class="card-img-top" alt="Product Image" width=225 height=225>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.name }}</h5>
+                            <p class="card-text">
+                                {{ product.amount }}
+                                <br>
+                                <br>
+                                ${{ product.priceForEach }}0
+                                {% if current_user.is_authenticated %}
+                                    <br>                              
+                                    <form method="POST" action="">
+                                        {{ specialsform.hidden_tag() }}
+                                        Quantity: {{ specialsform.quantity }}
+                                        <br>
+                                        <br>
+                                        <input id="itemaddedtospecialscart" name="itemaddedtospecialscart" type="hidden" value="{{ product.name }}">
+                                        {{ specialsform.addspecial(class="btn btn-primary") }}
+                                    </form>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+                <div>
+            </div>
+        </div>
+        <div class="container-fluid mt-3">
+            <br>
+            <legend><b>Sweets</b></legend>
+            <hr>
+            <div class="text-center">
+                {% for product in sweets %}
+                    <div class="card ml-3 mr-3 mt-3 h-100" style="display: inline-block" height=225>
+                        <img src="{{ product.image_file }}" class="card-img-top" alt="Product Image" width=225 height=225>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.name }}</h5>
+                            <p class="card-text">
+                                {{ product.amount }}
+                                <br>
+                                <br>
+                                ${{ product.priceForEach }}0
+                                {% if current_user.is_authenticated %}
+                                    <br>                                  
+                                    <form method="POST" action="">
+                                        {{ specialsform.hidden_tag() }}
+                                        Quantity: {{ specialsform.quantity }}
+                                        <br>
+                                        <br>
+                                        <input id="itemaddedtosweetscart" name="itemaddedtosweetscart" type="hidden" value="{{ product.name }}">
+                                        {{ specialsform.addspecial(class="btn btn-primary") }}
+                                    </form>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+                <div>
+            </div>
+        </div>
+        <div class="container-fluid mt-3">
+            <br>
+            <legend><b>Khakharas</b></legend>
+            <hr>
+            <div class="text-center">
+                {% for product in khakharas %}
+                    <div class="card ml-3 mr-3 mt-3 h-100" style="display: inline-block" height=225>
+                        <img src="{{ product.image_file }}" class="card-img-top" alt="Product Image" width=225 height=225>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.name }}</h5>
+                            <p class="card-text">
+                                {{ product.amount }}
+                                <br>
+                                <br>
+                                ${{ product.priceForEach }}0
+                                {% if current_user.is_authenticated %}
+                                    <br>
+                                    <form method="POST" action="">
+                                        {{ specialsform.hidden_tag() }}
+                                        Quantity: {{ specialsform.quantity }}
+                                        <br>
+                                        <br>
+                                        <input id="itemaddedtokhakharascart" name="itemaddedtokhakharascart" type="hidden" value="{{ product.name }}">
+                                        {{ specialsform.addspecial(class="btn btn-primary") }}
+                                    </form>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+                <div>
+            </div>
+        </div>
+        <div class="container-fluid mt-3">
+            <br>
+            <legend><b>Dry Snacks</b></legend>
+            <hr>
+            <div class="text-center">
+                {% for product in drysnacks %}
+                    <div class="card ml-3 mr-3 mt-3 h-100" style="display: inline-block" height=225>
+                        <img src="{{ product.image_file }}" class="card-img-top" alt="Product Image" width=225 height=225>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.name }}</h5>
+                            <p class="card-text">
+                                {{ product.amount }}
+                                <br>
+                                <br>
+                                ${{ product.priceForEach }}0
+                                {% if current_user.is_authenticated %}
+                                    <br>                                
+                                    <form method="POST" action="">
+                                        {{ sweetsform.hidden_tag() }}
+                                        Quantity: {{ specialsform.quantity }}
+                                        <br>
+                                        <br>
+                                        <input id="itemaddedtodrysnackscart" name="itemaddedtodrysnackscart" type="hidden" value="{{ product.name }}">
+                                        {{ sweetsform.addsweet(class="btn btn-primary") }}
+                                    </form>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+                <div>
+            </div>
+        </div>
+
+
+<div class="form-group">
+                        {{ form.creditcardnum.label(class="form-control-label") }}
+                        {% if form.creditcardnum.errors %}
+                            {{ form.creditcardnum(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.creditcardnum.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.creditcardnum(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.securitycode.label(class="form-control-label") }}
+                        {% if form.securitycode.errors %}
+                            {{ form.securitycode(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.securitycode.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.securitycode(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.expirationdate.label(class="form-control-label") }}
+                        {% if form.expirationdate.errors %}
+                            {{ form.expirationdate(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.expirationdate.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.expirationdate(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+
+
+
+
+
+<h5>
+                    <b>Full Name:</b> {{ current_user.fullname }}<br><br>
+                    <b>Email:</b> {{ current_user.email }}<br><br>
+                    <b>Phone Number:</b> {{ current_user.phonenumber }}<br><br>
+                    <b>Credit Card Number:</b> {{ current_user.creditcardnum }}<br><br>
+                    <b>Security Code:</b> {{ current_user.securitycode }}<br><br>
+                    <b>Credit Card Expiration Data:</b> {{ current_user.expirationdate }}<br><br>
+                </h5>
+
+
+
+
+class Cart(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    image_file = db.Column(db.String(200), nullable=False)
+    name = db.Column(db.String(50), nullable=False)
+    amount = db.Column(db.String(50), nullable=False)
+    priceForEach = db.Column(db.Float, nullable=False)
+    quantity = db.Column(db.Integer, nullable=False)
+    total_price = db.Column(db.Float, nullable=False)
+    date_added = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    def __repr__(self):
+        return f"'{self.name}'"
+
+        class SpecialsProduct(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    image_file = db.Column(db.String(200), nullable=False)
+    name = db.Column(db.String(200), nullable=False)
+    amount = db.Column(db.String(50), nullable=False)
+    priceForEach = db.Column(db.Float, nullable=False)
+    
+    def __repr__(self):
+        return f"{self.name}"
+
+class DrySnacksProduct(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    image_file = db.Column(db.String(200), nullable=False)
+    name = db.Column(db.String(200), nullable=False)
+    amount = db.Column(db.String(50), nullable=False)
+    priceForEach = db.Column(db.Float, nullable=False)
+
+    def __repr__(self):
+        return f"{self.name}"
+
+class SweetsProduct(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    image_file = db.Column(db.String(200), nullable=False)
+    name = db.Column(db.String(200), nullable=False)
+    amount = db.Column(db.String(50), nullable=False)
+    priceForEach = db.Column(db.Float, nullable=False)
+
+    def __repr__(self):
+        return f"{self.name}"
+
+class KhakharasProduct(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    image_file = db.Column(db.String(200), nullable=False)
+    name = db.Column(db.String(200), nullable=False)
+    amount = db.Column(db.String(50), nullable=False)
+    priceForEach = db.Column(db.Float, nullable=False)
+
+    def __repr__(self):
+        return f"{self.name}"
+
+
+
+# class UserCheckoutInfo(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     creditcardnum = db.Column(db.Integer, nullable=False)
+#     securitycode = db.Column(db.Integer, nullable=False)
+#     expirationdate = db.Column(db.String(50), nullable=False)
+#     street = db.Column(db.String(100), nullable=False)
+#     city = db.Column(db.String(100), nullable=False)
+#     state = db.Column(db.String(100), nullable=False)
+#     postalzip = db.Column(db.String(100), nullable=False)
+
+#     def __repr__(self):
+#         return f"{self.id}"
+\
+
+
+
+def validate_creditcardnum(self, creditcardnum):
+        ccnum = list(creditcardnum.data.strip())
+        check_digit = ccnum.pop()
+        ccnum.reverse()
+        processed_digits = []
+        for index, digit in enumerate(ccnum):
+            if index % 2 == 0:
+                doubled_digit = int(digit) * 2
+                if doubled_digit > 9:
+                    doubled_digit = doubled_digit - 9
+                processed_digits.append(doubled_digit)
+            else:
+                processed_digits.append(int(digit))
+        total = int(check_digit) + sum(processed_digits)
+        if total % 10 != 0:
+            raise ValidationError("That is an invalid Credit Card number. Please check your input.")
+
+
+
+
+
+if request.form.get('itemaddedtospecialscart'):
+            added_specials_product = request.form.get('itemaddedtospecialscart')
+            already_exists_in_cart = Cart.query.filter_by(name=added_specials_product).first()
+            if already_exists_in_cart:
+                db.session.delete(already_exists_in_cart)
+
+                added_specials_product_object = SpecialsProduct.query.filter_by(name=added_specials_product).first()
+                specialsform = AddToCartSpecialsForm()
+                product_image = str(added_specials_product_object.image_file)
+                product_name = str(added_specials_product_object.name)
+                product_amount = str(added_specials_product_object.amount)
+                product_price = float(added_specials_product_object.priceForEach)
+                quantity_of_product = specialsform.quantity.data
+                total_price = product_price * int(quantity_of_product)
+                buyer = current_user.id
+                cart_product = Cart(image_file=product_image, name=product_name, amount=product_amount, priceForEach=product_price, quantity=quantity_of_product, total_price=total_price, user_id=buyer)
+                db.session.add(cart_product)
+                db.session.commit()
+                flash(f"You have successfully added {product_name} to your cart!", "success")
+            else:
+                added_specials_product_object = SpecialsProduct.query.filter_by(name=added_specials_product).first()
+                specialsform = AddToCartSpecialsForm()
+                product_image = str(added_specials_product_object.image_file)
+                product_name = str(added_specials_product_object.name)
+                product_amount = str(added_specials_product_object.amount)
+                product_price = float(added_specials_product_object.priceForEach)
+                quantity_of_product = specialsform.quantity.data
+                total_price = product_price * int(quantity_of_product)
+                buyer = current_user.id
+                cart_product = Cart(image_file=product_image, name=product_name, amount=product_amount, priceForEach=product_price, quantity=quantity_of_product, total_price=total_price, user_id=buyer)
+                db.session.add(cart_product)
+                db.session.commit()
+                flash(f"You have successfully added {product_name} to your cart!", "success")
+        if request.form.get('itemaddedtosweetscart'):
+            added_sweets_product = request.form.get('itemaddedtosweetscart')
+            already_exists_in_cart = Cart.query.filter_by(name=added_sweets_product).first()
+            if already_exists_in_cart:
+                db.session.delete(already_exists_in_cart)
+
+                added_sweets_product_object = SweetsProduct.query.filter_by(name=added_sweets_product).first()
+                sweetsform = AddToCartSweetsForm()
+                product_image = str(added_sweets_product_object.image_file)
+                product_name = str(added_sweets_product_object.name)
+                product_amount = str(added_sweets_product_object.amount)
+                product_price = float(added_sweets_product_object.priceForEach)
+                quantity_of_product = sweetsform.quantity.data
+                total_price = product_price * int(quantity_of_product)
+                buyer = current_user.id
+                cart_product = Cart(image_file=product_image, name=product_name, amount=product_amount, priceForEach=product_price, quantity=quantity_of_product, total_price=total_price, user_id=buyer)
+                db.session.add(cart_product)
+                db.session.commit()
+                flash(f"You have successfully added {product_name} to your cart!", "success")
+            else:
+                added_sweets_product_object = SweetsProduct.query.filter_by(name=added_sweets_product).first()
+                sweetsform = AddToCartSweetsForm()
+                product_image = str(added_sweets_product_object.image_file)
+                product_name = str(added_sweets_product_object.name)
+                product_amount = str(added_sweets_product_object.amount)
+                product_price = float(added_sweets_product_object.priceForEach)
+                quantity_of_product = sweetsform.quantity.data
+                total_price = product_price * int(quantity_of_product)
+                buyer = current_user.id
+                cart_product = Cart(image_file=product_image, name=product_name, amount=product_amount, priceForEach=product_price, quantity=quantity_of_product, total_price=total_price, user_id=buyer)
+                db.session.add(cart_product)
+                db.session.commit()
+                flash(f"You have successfully added {product_name} to your cart!", "success")
+        if request.form.get('itemaddedtokhakharascart'):
+            added_khakharas_product = request.form.get('itemaddedtokhakharascart')
+            already_exists_in_cart = Cart.query.filter_by(name=added_khakharas_product).first()
+            if already_exists_in_cart:
+                db.session.delete(already_exists_in_cart)
+
+                added_khakharas_product_object = KhakharasProduct.query.filter_by(name=added_khakharas_product).first()
+                product_image = str(added_khakharas_product_object.image_file)
+                product_name = str(added_khakharas_product_object.name)
+                product_amount = str(added_khakharas_product_object.amount)
+                product_price = float(added_khakharas_product_object.priceForEach)
+                quantity_of_product = khakharasform.quantity.data
+                total_price = product_price * int(quantity_of_product)
+                buyer = current_user.id
+                cart_product = Cart(image_file=product_image, name=product_name, amount=product_amount, priceForEach=product_price, quantity=quantity_of_product, total_price=total_price, user_id=buyer)
+                db.session.add(cart_product)
+                db.session.commit()
+                flash(f"You have successfully added {product_name} to your cart!", "success")  
+            else:
+                added_khakharas_product_object = KhakharasProduct.query.filter_by(name=added_khakharas_product).first()
+                product_image = str(added_khakharas_product_object.image_file)
+                product_name = str(added_khakharas_product_object.name)
+                product_amount = str(added_khakharas_product_object.amount)
+                product_price = float(added_khakharas_product_object.priceForEach)
+                quantity_of_product = khakharasform.quantity.data
+                total_price = product_price * int(quantity_of_product)
+                buyer = current_user.id
+                cart_product = Cart(image_file=product_image, name=product_name, amount=product_amount, priceForEach=product_price, quantity=quantity_of_product, total_price=total_price, user_id=buyer)
+                db.session.add(cart_product)
+                db.session.commit()
+                flash(f"You have successfully added {product_name} to your cart!", "success")  
+        if request.form.get('itemaddedtodrysnackscart'):
+            added_drysnacks_product = request.form.get('itemaddedtodrysnackscart')
+            already_exists_in_cart = Cart.query.filter_by(name=added_drysnacks_product).first()
+            if already_exists_in_cart:
+                db.session.delete(already_exists_in_cart)
+
+                added_drysnacks_product_object = DrySnacksProduct.query.filter_by(name=added_drysnacks_product).first()
+                product_image = str(added_drysnacks_product_object.image_file)
+                product_name = str(added_drysnacks_product_object.name)
+                product_amount = str(added_drysnacks_product_object.amount)
+                product_price = float(added_drysnacks_product_object.priceForEach)
+                quantity_of_product = drysnacksform.quantity.data
+                total_price = product_price * int(quantity_of_product)
+                buyer = current_user.id
+                cart_product = Cart(image_file=product_image, name=product_name, amount=product_amount, priceForEach=product_price, quantity=quantity_of_product, total_price=total_price, user_id=buyer)
+                db.session.add(cart_product)
+                db.session.commit()
+                flash(f"You have successfully added {product_name} to your cart!", "success")
+            else:
+                added_drysnacks_product_object = DrySnacksProduct.query.filter_by(name=added_drysnacks_product).first()
+                product_image = str(added_drysnacks_product_object.image_file)
+                product_name = str(added_drysnacks_product_object.name)
+                product_amount = str(added_drysnacks_product_object.amount)
+                product_price = float(added_drysnacks_product_object.priceForEach)
+                quantity_of_product = drysnacksform.quantity.data
+                total_price = product_price * int(quantity_of_product)
+                buyer = current_user.id
+                cart_product = Cart(image_file=product_image, name=product_name, amount=product_amount, priceForEach=product_price, quantity=quantity_of_product, total_price=total_price, user_id=buyer)
+                db.session.add(cart_product)
+                db.session.commit()
+                flash(f"You have successfully added {product_name} to your cart!", "success")
+        return redirect(url_for('snack_page'))
+
+
+
+<div class="text-left">
+                <br>
+                <h4>Two Factor Authentication</h4>
+                <br>
+                <form method="POST" action="" enctype="multipart/form-data">
+                    <input type="button" class="btn btn-success" id="sendcodebutton" name="sendcodebutton" value="Send 6-Digit Code">
+                    <br>
+                    <br>
+                    <b>After submitting the form above, type in the six digit code to complete your registration: </b>
+                    <input type="text" id="sixdigitcodeinput" name="sixdigitcodeinput">
+                    <br>
+                    <br>
+                    <input type="hidden" id="submitting6digitcode" name="submitting6digitcode">
+                    {{ form2.submit(class="btn btn-info") }}
+                </form>
+            </div>
+
+if request.form.get("sendcodebutton"):   
+                sixdigitcode = ""
+                random_numbers = []
+                for i in range(0,6):
+                    digit = random.randint(1,9)
+                    random_numbers.append(digit)
+                sixdigitcode.join(random_numbers)
+                send_TwoFactorAuthenticationEmail(form.email.data, sixdigitcode)
+                flash("An email with instructions has been sent to the email provided above.")
+                if request.form.get("submitting6digitcode"):
+                    user_input = str(request.form.get("submitting6digitcode"))
+                    correct_code = str(sixdigitcode)
+                    if user_input == correct_code:
+                        db.session.add(user)
+                        db.session.commit()
+                        flash(f"Welcome, {form.email.data}. Your account has been created successfully!", "success")
+                        login_user(user)
+                        next_page = request.args.get('next')
+                        return redirect(next_page) if next_page else redirect(url_for("snack_page"))
+                    else:
+                        flash("That is the incorrect code. Please check your spelling and email.", "danger")
+
+
+
+
+
+all_lineitems = Lineitem.query.filter_by(buyer_id=current_user.id)
+    lineitem_obj = Lineitem.query.filter_by(name=item).first()
+    item_id_cart = lineitem_obj.product_id
+    product = Product.query.filter_by(id=item_id_cart).first()
+    item_price_cart = product.unit_price
+    total_price_of_cart = 0
+    for lineitem in all_lineitems:
+        quantity_of_lineitem = lineitem.quantity
+        total_price_of_cart = total_price_of_cart + (item_price_cart * quantity_of_lineitem)
+    new_cart = Cart(total_price=total_price_of_cart, active=True, buyer_id=current_user.id, lineitem_id=lineitem_obj.id)
+    db.session.add(new_cart)
+    db.session.commit()
+
+
+
+
+
+
+<div class="text-center">
+                <table class="table table-hover table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <td scope="col"><b>Image</b></td>
+                            <td scope="col"><b>Name</b></td>
+                            <td scope="col"><b>Amount</b></td>
+                            <td scope="col"><b>Price</b></td>
+                            {% if current_user.is_authenticated %}
+                                <td scope="col"><b>Quantity</b></td>
+                                <td scope="col"><b>Action</b></td>
+                            {% endif %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td class="text-center">
+                                    <img src="{{ product.image_file }}" alt="{{ product.name }}'s Image" width=185 height=150>
+                                </td>
+                                <td class="text-center">{{ product.name }}</td>
+                                <td class="text-center">{{ product.size }}</td>
+                                <td class="text-center">${{ product.unit_price }}0</td>
+                                {% if current_user.is_authenticated %}
+                                    <form method="POST" action="">
+                                        {{ addtocart.hidden_tag() }}
+                                        <td class="text-center">Quantity: {{ addtocart.quantity }}</td>
+                                        <td class="text-center">
+                                            <input id="addtocart" name="addtocart" type="hidden" value="{{ product.name }}">
+                                            {{ addtocart.addbtn(class="btn btn-primary") }}
+                                        </td>
+                                    </form>
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+
+
+
+<div class="text-center">
+                <table class="table table-hover table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <td scope="col"><b>Image</b></td>
+                            <td scope="col"><b>Name</b></td>
+                            <td scope="col"><b>Amount</b></td>
+                            <td scope="col"><b>Price</b></td>
+                            {% if current_user.is_authenticated %}
+                                <td scope="col"><b>Quantity</b></td>
+                                <td scope="col"><b>Action</b></td>
+                            {% endif %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for product in sweets %}
+                            <tr>
+                                <td class="text-center">
+                                    <img src="{{ product.image_file }}" alt="{{ product.name }}'s Image" width=185 height=150>
+                                </td>
+                                <td class="text-center">{{ product.name }}</td>
+                                <td class="text-center">{{ product.size }}</td>
+                                <td class="text-center">${{ product.unit_price }}0</td>
+                                {% if current_user.is_authenticated %}
+                                    <form method="POST" action="">
+                                        {{ addtocart.hidden_tag() }}
+                                        <td class="text-center">Quantity: {{ addtocart.quantity }}</td>
+                                        <td class="text-center">
+                                            <input id="addtocart" name="addtocart" type="hidden" value="{{ product.name }}">
+                                            {{ addtocart.addbtn(class="btn btn-primary") }}
+                                        </td>
+                                    </form>
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div>
+            </div>
+
+
+
+<div class="text-center">
+                <table class="table table-hover table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <td scope="col"><b>Image</b></td>
+                            <td scope="col"><b>Name</b></td>
+                            <td scope="col"><b>Amount</b></td>
+                            <td scope="col"><b>Price</b></td>
+                            {% if current_user.is_authenticated %}
+                                <td scope="col"><b>Quantity</b></td>
+                                <td scope="col"><b>Action</b></td>
+                            {% endif %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for product in khakharas %}
+                            <tr>
+                                <td class="text-center">
+                                    <img src="{{ product.image_file }}" alt="{{ product.name }}'s Image" width=185 height=150>
+                                </td>
+                                <td class="text-center">{{ product.name }}</td>
+                                <td class="text-center">{{ product.size }}</td>
+                                <td class="text-center">${{ product.unit_price }}0</td>
+                                {% if current_user.is_authenticated %}
+                                    <form method="POST" action="">
+                                        {{ addtocart.hidden_tag() }}
+                                        <td class="text-center">Quantity: {{ addtocart.quantity }}</td>
+                                        <td class="text-center">
+                                            <input id="addtocart" name="addtocart" type="hidden" value="{{ product.name }}">
+                                            {{ addtocart.addbtn(class="btn btn-primary") }}
+                                        </td>
+                                    </form>
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div>
+            </div>
+
+
+<div class="text-center">
+                <table class="table table-hover table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <td scope="col"><b>Image</b></td>
+                            <td scope="col"><b>Name</b></td>
+                            <td scope="col"><b>Amount</b></td>
+                            <td scope="col"><b>Price</b></td>
+                            {% if current_user.is_authenticated %}
+                                <td scope="col"><b>Quantity</b></td>
+                                <td scope="col"><b>Action</b></td>
+                            {% endif %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for product in drysnacks %}
+                            <tr>
+                                <td class="text-center">
+                                    <img src="{{ product.image_file }}" alt="{{ product.name }}'s Image" width=185 height=150>
+                                </td>
+                                <td class="text-center">{{ product.name }}</td>
+                                <td class="text-center">{{ product.size }}</td>
+                                <td class="text-center">${{ product.unit_price }}0</td>
+                                {% if current_user.is_authenticated %}
+                                    <form method="POST" action="">
+                                        {{ addtocart.hidden_tag() }}
+                                        <td class="text-center">Quantity: {{ addtocart.quantity }}</td>
+                                        <td class="text-center">
+                                            <input id="addtocart" name="addtocart" type="hidden" value="{{ product.name }}">
+                                            {{ addtocart.addbtn(class="btn btn-primary") }}
+                                        </td>
+                                    </form>
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div>
+            </div>
+
+
+
+<div class="container-fluid">
+        <header class="site-header">
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+                <div class="container">
+                    <img src="{{ url_for('static', filename='images/mainheaderimage.jpg') }}" alt="JSMC Logo" width=60 height=60 class="mr-3 ml=0">
+                    <a class="navbar-brand" href="/">Jain Society of Metropolitan Chicago</a>
+                    <div class="collapse navbar-collapse">
+                        <div class="navbar-nav mr-auto">
+                            <a class="nav-item nav-link" href="{{ url_for('snack_page') }}">Home</a>
+                            <a class="nav-item nav-link" target="_blank" href="http://www.jsmconline.org/about_us.php">About</a>
+                        </div>
+                        <!-- Navbar Right Side -->
+                        <div class="navbar-nav">
+                            {% if current_user.is_authenticated %}
+                                <a class="nav-item nav-link" href="{{ url_for('account') }}">Account</a>
+                                <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+                                <a class="nav-item nav-link" href="{{ url_for('cart') }}">{% block CartNav %}{% endblock %}</a>
+                            {% else %}
+                                <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+                                <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse" id="navbarToggleExternalContent">
+                    <div class="bg-dark p-4">
+                        <h4 class="text-white">Collapsed content</h4>
+                        <span class="text-muted">Toggleable via the navbar brand.</span>
+                    </div>
+                </div>
+                <nav class="navbar navbar-dark bg-dark">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
+            </nav>
+        </header> 
+    </div>
+
+
+if current_user.is_authenticated == False:
+            flash("Please log in or register first before adding items to your cart.", "warning")
+            return redirect(url_for("snack_page"))
+        else:
+            cart_exists = Cart.query.filter_by(buyer_id=current_user.id).first()
+            lineitems = Lineitem.query.filter_by(buyer_id=current_user.id).all()
+            total_price_cart = 0
+            for lineitem in lineitems:
+                product_obj = Product.query.filter_by(id=lineitem.product_id).first()
+                price = product_obj.price
+                quantity = lineitem.quantity
+                total_price_cart = total_price_cart + price * quantity
+            if cart_exists == None:
+                new_cart = Cart(total_price=total_price_cart, active=True, buyer_id=current_user.id)
+                db.session.add(new_cart)
+                db.session.commit()
+            else:
+
+
+
+
+
+def DeleteLineitems():
+    from app import db
+    from app.routes import CurrentCart
+    from app.models import Lineitem
+    active_cart = CurrentCart()
+    lineitems = Lineitem.query.filter_by(cart_id=active_cart.id).all()
+    for lineitem in lineitems:
+        db.session.delete(lineitem)
+        db.session.commit()
+
+def DeleteCarts():
+    from app import db
+    from app.models import Cart
+    from app.routes import CurrentCart
+    from flask_login import current_user
+    user_active_cart = CurrentCart()
+    current_user_id = user_active_cart.user_id
+    user_carts = Cart.query.filter_by(buyer_id=current_user_id).all()
+    for cart in user_carts:
+        db.session.delete(cart)
+        db.session.commit()
+
+
+
+
+{% extends "base.html" %}
+
+{% block head %}
+<title>Your Cart | JSMC Food Court</title> 
+{% endblock %}
+
+{% block body %}
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    <br>
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="container text-center">
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <div style="padding-top: 75px;" class="container">
+        <h1 class="text-center">Your Cart</h1>
+        
+        <br>
+        <br>
+        {% if user_cart %}
+            <table class="table table-hover table-bordered text-center">
+                <caption class="mt-3">Want to order more items? Go back to <a href="{{ url_for('snack_page') }}">home page</a>.</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in user_cart %}
+                        <tr>
+                            <td>
+                                <img src="{{ item.image_file }}" alt="Product Image" height=70 width=90>
+                            </td>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.amount }}</td>
+                            <td>${{ item.priceForEach }}0</td>
+                            <td>{{ item.quantity }}</td>
+                            <td>
+                                <form action="" method="POST">
+                                    {{ removeitemform.hidden_tag() }}
+                                    <input id="deleteitemincartbutton" name="deleteitemincartbutton" type="hidden" value="{{ item.name }}" class="btn btn-danger">
+                                    {{ removeitemform.remove(class="btn btn-danger") }}
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="text-right">
+                <br>
+                <br>
+                <h3>Total Price</h4>
+                <h4>${{ total_price }}0</h5>
+            </div>
+            <div class="text-center">
+                <br>
+                <br>
+                <a href="{{ url_for('checkout') }}" class="btn btn-info">Proceed To Checkout</a>
+            </div>
+        {% else %}
+            <br><h3 class="text-center">Your cart is empty.</h3><br><br>
+            <h4 class="text-center">Visit the <a href="{{ url_for('snack_page') }}">home page</a> to add items to your cart.</h4>
+        {% endif %}
+
+    </div>
+
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+{% endblock %}
+
+
+<legend class="border-bottom mb-4">Billing Information (Optional)</legend>
+                    <div class="form-group">
+                        {{ form.creditcardnum.label(class="form-control-label") }}
+                        {% if form.creditcardnum.errors %}
+                            {{ form.creditcardnum(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.creditcardnum.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.creditcardnum(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.securitycode.label(class="form-control-label") }}
+                        {% if form.securitycode.errors %}
+                            {{ form.securitycode(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.securitycode.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.securitycode(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.expirationdate.label(class="form-control-label") }}
+                        {% if form.expirationdate.errors %}
+                            {{ form.expirationdate(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.expirationdate.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.expirationdate(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.street.label(class="form-control-label") }}
+                        {% if form.street.errors %}
+                            {{ form.street(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.street.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.street(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.city.label(class="form-control-label") }}
+                        {% if form.city.errors %}
+                            {{ form.city(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.city.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.city(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.state.label(class="form-control-label") }}
+                        {% if form.state.errors %}
+                            {{ form.state(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.state.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.state(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.postalzip.label(class="form-control-label") }}
+                        {% if form.postalzip.errors %}
+                            {{ form.postalzip(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.postalzip.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.postalzip(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+
+
+
+
+
+<div class="modal fade" id="OrderInformation" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: 1200px; vertical-align: middle;">
+                <div class="modal-header">
+                    <h5 class="modal-title">Order Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">    
+                        <span aria-hidden="false">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-section">
+                        <form method="POST" action="" enctype="multipart/form-data">
+                            {{ form.hidden_tag() }}
+                            <fieldset class="form-group">
+                                <div class="form-group">
+                                    {{ form.creditcardnum.label(class="form-control-label") }}
+                                    {% if form.creditcardnum.errors %}
+                                        {{ form.creditcardnum(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.creditcardnum.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.creditcardnum(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.securitycode.label(class="form-control-label") }}
+                                    {% if form.securitycode.errors %}
+                                        {{ form.securitycode(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.securitycode.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.securitycode(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.expirationdate.label(class="form-control-label") }}
+                                    {% if form.expirationdate.errors %}
+                                        {{ form.expirationdate(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.expirationdate.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.expirationdate(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.street.label(class="form-control-label") }}
+                                    {% if form.street.errors %}
+                                        {{ form.street(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.street.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.street(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.city.label(class="form-control-label") }}
+                                    {% if form.city.errors %}
+                                        {{ form.city(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.city.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.city(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.state.label(class="form-control-label") }}
+                                    {% if form.state.errors %}
+                                        {{ form.state(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.state.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.state(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.postalzip.label(class="form-control-label") }}
+                                    {% if form.postalzip.errors %}
+                                        {{ form.postalzip(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.postalzip.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.postalzip(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                </div>
+                            </fieldset>
+                            <div class="form-group">
+                                {{ form.postalzip(class="btn btn-info") }}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="container btn btn-success">Save</button>
+                    <button type="button" class="container btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+user_obj = User.query.filter_by(id=current_user.id).first()
+            if user_obj.creditcardnum and user_obj.securitycode and user_obj.expirationdate and user_obj.street and user_obj.city and user_obj.state and user_obj.postalzip:
+                print("Already has existing data, adding new to the database")
+                current_user.email = form.email.data
+                current_user.phonenumber = form.phonenumber.data
+                current_user.creditcardnum = form.creditcardnum.data
+                current_user.securitycode = form.securitycode.data
+                current_user.expirationdate = form.expirationdate.data
+                current_user.street = form.street.data
+                current_user.city = form.city.data
+                current_user.state = form.state.data
+                current_user.postalzip = form.postalzip.data
+                db.session.commit()
+                flash("Your account has been updated!", "success")
+                return redirect(url_for("account"))
+            else:
+                current_user.creditcardnum = form.creditcardnum.data
+                current_user.securitycode = form.securitycode.data
+                current_user.expirationdate = form.expirationdate.data
+                current_user.street = form.street.data
+                current_user.city = form.city.data
+                current_user.state = form.state.data
+                current_user.postalzip = form.postalzip.data
+                db.session.commit()
+                flash("Your account has been updated!", "success")
+                return redirect(url_for("account"))
+
+
+    {% if user_cart %}
+        <div class="container">
+            <br>
+            <h1 class="text-center">Checkout</h1>
+            <hr class="container text-center">
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="container-fluid">
+            <h2 class="ml-4">Your Cart:</h2>
+            <hr class="ml-4">
+            <br>
+            <br>
+        </div>
+        
+        <div class="container">
+            <table class="table table-hover table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in user_cart %}
+                        <tr>
+                            <td>
+                                <img src="{{ item.image_file }}" alt="Product Image" height=70 width=90>
+                            </td>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.amount }}</td>
+                            <td>${{ item.priceForEach }}0</td>
+                            <td>{{ item.quantity }}</td>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br>
+            <h5><b>Total Price: ${{ total_price }}0</b></h5>
+            <br>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container-fluid">
+            <h2 class="ml-4">Your Information:</h2>
+            <hr class="ml-4">
+            <br>
+            <br>
+        </div>
+        
+        <div class="container">
+            <p>
+                <div class="content-section">
+                    <form method="POST" action="" enctype="multipart/form-data">
+                        {{ form.hidden_tag() }}
+                        <fieldset class="form-group">
+                            <legend class="border-bottom mb-4">Checkout / Billing Information</legend>
+                            <div class="form-group">
+                                {{ form.creditcardnum.label(class="form-control-label") }}
+                                {% if form.creditcardnum.errors %}
+                                    {{ form.creditcardnum(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.creditcardnum.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.creditcardnum(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.securitycode.label(class="form-control-label") }}
+                                {% if form.securitycode.errors %}
+                                    {{ form.securitycode(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.securitycode.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.securitycode(class="form-control form-control-lg") }}
+                                {% endif %}
+        
+                            </div>
+                            <div class="form-group">
+                                {{ form.expirationdate.label(class="form-control-label") }}
+                                {% if form.expirationdate.errors %}
+                                    {{ form.expirationdate(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.expirationdate.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.expirationdate(class="form-control form-control-lg") }}
+                                {% endif %}
+                                <small>
+                                    MM / DD / YYYY
+                                </small>
+                            </div>
+                            <div class="form-group">
+                                {{ form.street.label(class="form-control-label") }}
+                                {% if form.street.errors %}
+                                    {{ form.street(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.street.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.street(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.city.label(class="form-control-label") }}
+                                {% if form.city.errors %}
+                                    {{ form.city(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.city.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.city(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.state.label(class="form-control-label") }}
+                                {% if form.state.errors %}
+                                    {{ form.state(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.state.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.state(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.postalzip.label(class="form-control-label") }}
+                                {% if form.postalzip.errors %}
+                                    {{ form.postalzip(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.postalzip.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.postalzip(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                        </fieldset>
+                        <div class="form-group">
+                            {{ form.submit(class="btn btn-info") }}
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div>
+                    <a data-toggle="modal" data-target="#purchase_modal" type="submit" class="container btn btn-success btn-large">
+                        Purchase
+                    </a>
+                </div>
+            </p>
+        </div>
+    {% else %}
+        <br><h3 class="text-center">Your cart is empty. Please add items to your cart before checkout.</h3><br><br>
+        <h4 class="text-center">Visit the <a href="{{ url_for('snack_page') }}">home page</a> to add items to your cart.</h4>
+    {% endif %}
+    
+    
+<table class="table text-center" width="100%">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in products %}
+                                    <tr>
+                                        <td>
+                                            <img src="{{ item.image_file }}" alt="Product Image" height=110 width=140>
+                                        </td>
+                                        <td>{{ item.name }}</td>
+                                        <td>eh</td>
+                                        <td>${{ item.unit_price }}0</td>
+                                    </tr>        
+                                {% endfor %}
+                            </tbody>
+                        </table>
+
+
+<div id="content"><h2 style="padding-top: 75px; width: 70%;">Specials</h2>
+        <hr>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row my-5 card-wrapper">
+                    {% for product in specials %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <img class="card-img-top embed-responsive-item" src="{{ product.image_file }}">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">{{ product.name }}</h4>
+                                    <h5>${{ product.unit_price }}0</h5>
+                                    <p style="border-top: 2px solid black; padding-top: 7px;" class="card-text">{{ product.size }}</p>
+                                </div>
+                                <div class="card-footer">
+                                    {% if current_user.is_authenticated %}
+                                        <form method="POST" action="">
+                                            <div class="text-center">
+                                                {{ addtocart.hidden_tag() }}
+                                                <div>Quantity: {{ addtocart.quantity }}</div>
+                                                
+                                                <div style="padding-top: 10px;">
+                                                    <input id="addtocart" name="addtocart" type="hidden" value="{{ product.name }}">
+                                                    {{ addtocart.addbtn(class="btn btn-primary") }}
+                                                </div>
+                                            </div>
+                                        </form>
+                                    {% else %}
+                                        <p class="text-muted">Log in or register to add items to your cart.</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <h2>Sweets</h2>
+        <hr>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row my-5 card-wrapper">
+                    {% for product in sweets %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <img class="card-img-top embed-responsive-item" src="{{ product.image_file }}">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">{{ product.name }}</h4>
+                                    <h5>${{ product.unit_price }}0</h5>
+                                    <p style="border-top: 2px solid black; padding-top: 7px;" class="card-text">{{ product.size }}</p>
+                                </div>
+                                <div class="card-footer">
+                                    {% if current_user.is_authenticated %}
+                                        <form method="POST" action="">
+                                            <div class="text-center">
+                                                {{ addtocart.hidden_tag() }}
+                                                <div>Quantity: {{ addtocart.quantity }}</div>
+                                                
+                                                <div style="padding-top: 10px;">
+                                                    <input id="addtocart" name="addtocart" type="hidden" value="{{ product.name }}">
+                                                    {{ addtocart.addbtn(class="btn btn-primary") }}
+                                                </div>
+                                            </div>
+                                        </form>
+                                    {% else %}
+                                        <p class="text-muted">Log in or register to add items to your cart.</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <h2>Khakharas</h2>
+        <hr>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row my-5 card-wrapper">
+                    {% for product in khakharas %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <img class="card-img-top embed-responsive-item" src="{{ product.image_file }}">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">{{ product.name }}</h4>
+                                    <h5>${{ product.unit_price }}0</h5>
+                                    <p style="border-top: 2px solid black; padding-top: 7px;" class="card-text">{{ product.size }}</p>
+                                </div>
+                                <div class="card-footer">
+                                    {% if current_user.is_authenticated %}
+                                        <form method="POST" action="">
+                                            <div class="text-center">
+                                                {{ addtocart.hidden_tag() }}
+                                                <div>Quantity: {{ addtocart.quantity }}</div>
+                                                
+                                                <div style="padding-top: 10px;">
+                                                    <input id="addtocart" name="addtocart" type="hidden" value="{{ product.name }}">
+                                                    {{ addtocart.addbtn(class="btn btn-primary") }}
+                                                </div>
+                                            </div>
+                                        </form>
+                                    {% else %}
+                                        <p class="text-muted">Log in or register to add items to your cart.</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <h2>Dry Snacks</h2>
+        <hr>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row my-5 card-wrapper">
+                    {% for product in drysnacks %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <img class="card-img-top embed-responsive-item" src="{{ product.image_file }}">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">{{ product.name }}</h4>
+                                    <h5>${{ product.unit_price }}0</h5>
+                                    <p style="border-top: 2px solid black; padding-top: 7px;" class="card-text">{{ product.size }}</p>
+                                </div>
+                                <div class="card-footer">
+                                    {% if current_user.is_authenticated %}
+                                        <form method="POST" action="">
+                                            <div class="text-center">
+                                                {{ addtocart.hidden_tag() }}
+                                                <div>Quantity: {{ addtocart.quantity }}</div>
+                                                
+                                                <div style="padding-top: 10px;">
+                                                    <input id="addtocart" name="addtocart" type="hidden" value="{{ product.name }}">
+                                                    {{ addtocart.addbtn(class="btn btn-primary") }}
+                                                </div>
+                                            </div>
+                                        </form>
+                                    {% else %}
+                                        <p class="text-muted">Log in or register to add items to your cart.</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<div class="m-5">
+            <div class="media">
+                <img class="rounded-circle" src="{{ image_file }}" width=125 height=125>
+                <div class="media-body">
+                    <div class="ml-4">
+                        <h2 class="account-heading">{{ current_user.email }}</h2>
+                        <p class="text-secondary">{{ current_user.phonenumber }}</p>
+                        <p class="text-secondary">
+                            <a style="color: white; width: 225px;" class="btn btn-info" href="{{ url_for('snack_page') }}">Home Page</a>
+                        </p>
+                        <p class="text-secondary">
+                            <a style="color: white; width: 225px;" class="btn btn-info" href="{{ url_for('change_email') }}">Change Email Address</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+                num_of_tries = num_of_tries - 1
+                print(num_of_tries)
+                if num_of_tries == 0:
+                    flash("You have locked your ability to sign in as an admin. Please try again later.", "danger")
+                    return redirect(url_for("snack_page"))
+                else:

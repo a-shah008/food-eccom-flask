@@ -1,0 +1,257 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Checkout | JSMC Food Court</title> 
+{% endblock %}
+
+<style>
+    .cancel {
+        text-decoration: none
+    }
+
+    .bg-pay {
+        background-color: #eee;
+        border-radius: 2px
+    }
+
+    .com-color {
+        color: #8f37aa !important
+    }
+
+    .radio {
+        cursor: pointer
+    }
+
+    label.radio input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        pointer-events: none
+    }
+
+    label.radio div {
+        padding: 7px 14px;
+        border: 2px solid #8f37aa;
+        display: inline-block;
+        color: #8f37aa;
+        border-radius: 3px;
+        text-transform: uppercase;
+        width: 100%;
+        margin-bottom: 10px
+    }
+
+    label.radio input:checked+div {
+        border-color: #8f37aa;
+        background-color: #8f37aa;
+        color: #fff
+    }
+
+    .fw-500 {
+        font-weight: 400
+    }
+
+    .lh-16 {
+        line-height: 16px
+    }
+</style>
+
+{% block body %}
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    <br>
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="container text-center">
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <div style="padding-top: 50px;" class="container mt-3 mb-3">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <div class="d-flex flex-row align-items-center">
+                <h2 class="mt-1">Billing Information</h2>
+            </div> <a href="{{ url_for('snack_page') }}" type="button" class="text-center btn btn-small btn-warning">Return</a>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="content-section">
+                    <form method="POST" action="" enctype="multipart/form-data">
+                        {{ form.hidden_tag() }}
+                        <fieldset class="form-group">
+                            <div class="form-group">
+                                {{ form.creditcardnum.label(class="form-control-label") }}
+                                {% if form.creditcardnum.errors %}
+                                    {{ form.creditcardnum(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.creditcardnum.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.creditcardnum(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.securitycode.label(class="form-control-label") }}
+                                {% if form.securitycode.errors %}
+                                    {{ form.securitycode(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.securitycode.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.securitycode(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.expirationdate.label(class="form-control-label") }}
+                                {% if form.expirationdate.errors %}
+                                    {{ form.expirationdate(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.expirationdate.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.expirationdate(class="form-control form-control-lg") }}
+                                {% endif %}
+                                <div class="text-muted">MM/YYYY</div>
+                            </div>
+                            <div class="form-group">
+                                {{ form.street.label(class="form-control-label") }}
+                                {% if form.street.errors %}
+                                    {{ form.street(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.street.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.street(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.city.label(class="form-control-label") }}
+                                {% if form.city.errors %}
+                                    {{ form.city(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.city.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.city(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.state.label(class="form-control-label") }}
+                                {% if form.state.errors %}
+                                    {{ form.state(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.state.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.state(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.postalzip.label(class="form-control-label") }}
+                                {% if form.postalzip.errors %}
+                                    {{ form.postalzip(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.postalzip.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.postalzip(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                        </fieldset>
+                        <div class="form-group">
+                            <input id="SaveBillingInformation" name="SaveBillingInformation" type="hidden" value="BillingInformation" class="btn btn-danger">
+                            {{ form.submit(class="container btn btn-primary") }}
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2"> </div>
+                <div class="col-md-4">
+                    <div class="bg-pay p-3"> <span class="font-weight-bold"><h4 class="mb-4"><b>Order Summary ( {{ item_counter }} )</b></h4></span>
+                    <hr>
+                    {% for item in products %}
+                        <!-- <img src="{{ item.image_file }}" alt="Product Image" width=90 height=70> -->
+                        <div class="d-flex justify-content-between mt-2"> <span class="fw-500 font-weight-bold">{{ item.name }}</span> <span class="font-weight-bold">${{ item.unit_price * products[item] }}0</span> </div>
+                        <div class="text-muted d-flex justify-content-between mt-2"> <span class="fw-500">Unit Price:</span> <span>${{ item.unit_price }}0</span> </div>
+                        <div class="text-muted d-flex justify-content-between mt-2"> <span class="fw-500">Quantity:</span> <span>{{ products[item] }}</span> </div>
+                        <div class="text-muted d-flex justify-content-between mt-2"> <span class="fw-500">Size:</span> <span>{{ item.size }}</span> </div>
+                        <hr>
+                    {% endfor %}
+                    <div class="d-flex justify-content-between mt-2"> <span class="fw-500 font-weight-bold"><h5>Total</h5> </span> <span class="text-success font-weight-bold"><h5>${{ total_price }}0</h5></span> </div>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <form method="POST">
+            <input id="PlaceOrderConfirm" name="PlaceOrderConfirm" value="Confirm Purchase" type="hidden">
+            <button class="container btn btn-success btn-large" data-toggle="modal" data-target="#purchase_modal">Place Order</button>
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+
+    
+    <div class="container">
+        
+        <!-- Modal
+        <div class="modal fade" id="purchase_modal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Purchase Confirmation</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">    
+                            <span aria-hidden="false">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-center">Are you sure you want to place this order?<br>All sales are final and returns are not accepted.</p>
+                        <div class="text-center">
+                            <h5>Total Price:</h5> </span> <span class="text-success font-weight-bold"><h5>${{ total_price }}0</h5>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <form action="" method="POST">
+                            <input id="PlaceOrderConfirm" name="PlaceOrderConfirm" value="Confirm Purchase" type="button" class="text-center btn btn-success">
+                        </form>
+                        <br>
+                        <button type="button" class="ml-3 text-center btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+         -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+{% endblock %}
